@@ -1,139 +1,289 @@
 {
-  "_note": "Volumes/CPC/difficulty are directional estimates (low/med/high + rough US monthly ranges) synthesized from public SERP/competitor data on 2026-06-17 — DataForSEO API was unavailable this session. Treat as planning guidance, not exact figures. Intent: C=commercial, T=transactional, I=informational.",
-  "pillar_topics": [
-    "glulam manufacturer insurance",
-    "mass timber insurance",
-    "engineered wood product manufacturer insurance"
-  ],
-  "groups": {
-    "product-liability": {
-      "keywords": [
-        { "kw": "product liability insurance manufacturers", "vol": "med (300-700)", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "engineered wood product liability", "vol": "low", "cpc": "med", "diff": "med", "intent": "C" },
-        { "kw": "glulam product liability insurance", "vol": "very low (exact-match, owned niche)", "cpc": "high", "diff": "low-competition", "intent": "T" },
-        { "kw": "structural product liability claim", "vol": "low", "cpc": "high", "diff": "med", "intent": "I/C" },
-        { "kw": "delamination insurance claim", "vol": "very low", "cpc": "high", "diff": "low", "intent": "I" }
-      ],
-      "paa": [
-        "Does product liability cover structural beam failures?",
-        "Who is liable if a glulam beam fails — the manufacturer or the installer?",
-        "Does general liability cover product defects?",
-        "What is products-completed operations coverage?"
-      ]
+  "niche": "Framing Contractor Insurance",
+  "domain": "framingcontractorinsurance.com",
+  "researched": "2026-06-19",
+  "notes": "This is a niche submarket. The exact-match seed terms (framing contractor insurance, framing subcontractor insurance) have very low volume (10-20/mo) because searchers use broader category terms. Strategy: rank on broader terms (contractor GL, subcontractor insurance, construction insurance) with framing-specific content, and capture long-tail via service/blog pages. All volume figures are US monthly averages from DataForSEO / Google Ads. null volume = sub-10 or not indexed by Google Ads.",
+  "primary_keywords": [
+    {
+      "keyword": "framing contractor insurance",
+      "volume": 10,
+      "cpc": null,
+      "difficulty": 18,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "Exact-match domain keyword. Low volume but perfect intent. Primary homepage H1 and title tag target."
     },
-    "property": {
-      "keywords": [
-        { "kw": "manufacturing plant property insurance", "vol": "med", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "lumber mill insurance", "vol": "low-med", "cpc": "med", "diff": "med", "intent": "C" },
-        { "kw": "sawmill insurance", "vol": "low-med", "cpc": "med", "diff": "med", "intent": "C" },
-        { "kw": "kiln insurance / dry kiln coverage", "vol": "very low", "cpc": "med", "diff": "low", "intent": "C" },
-        { "kw": "combustible dust insurance", "vol": "low", "cpc": "high", "diff": "med", "intent": "I/C" },
-        { "kw": "wood products manufacturer property insurance", "vol": "low", "cpc": "med", "diff": "med", "intent": "C" }
-      ],
-      "paa": [
-        "Does property insurance cover combustible dust explosions?",
-        "How is lumber yard inventory insured?",
-        "What is business interruption insurance for manufacturers?"
-      ]
+    {
+      "keyword": "framing insurance",
+      "volume": 70,
+      "cpc": 19.2,
+      "difficulty": 0,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "Highest volume framing-specific term. Difficulty 0 = minimal SERP competition. Strong homepage secondary target."
     },
-    "equipment-breakdown": {
-      "keywords": [
-        { "kw": "boiler and machinery insurance", "vol": "med", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "equipment breakdown insurance", "vol": "med", "cpc": "med", "diff": "med", "intent": "C" },
-        { "kw": "machinery breakdown coverage manufacturer", "vol": "low", "cpc": "med", "diff": "med", "intent": "C" },
-        { "kw": "manufacturing equipment insurance", "vol": "low-med", "cpc": "med", "diff": "med", "intent": "C" }
-      ],
-      "paa": [
-        "What does equipment breakdown insurance cover?",
-        "Does boiler and machinery cover production downtime?",
-        "Is equipment breakdown the same as property insurance?"
-      ]
+    {
+      "keyword": "contractor general liability insurance",
+      "volume": 8100,
+      "cpc": 111.26,
+      "difficulty": 15,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "Highest volume relevant term in scope. CPC $111 signals very strong buyer intent. Target GL service page."
     },
-    "general-liability": {
-      "keywords": [
-        { "kw": "general liability insurance manufacturer", "vol": "med", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "manufacturing liability insurance", "vol": "med", "cpc": "high", "diff": "high", "intent": "C" },
-        { "kw": "products completed operations coverage", "vol": "low", "cpc": "med", "diff": "med", "intent": "I" }
-      ],
-      "paa": [
-        "How much is general liability insurance for a manufacturer?",
-        "What does products-completed operations cover?"
-      ]
+    {
+      "keyword": "general liability insurance contractor",
+      "volume": 8100,
+      "cpc": 111.26,
+      "difficulty": 17,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "Same SERP cluster as contractor general liability insurance. Combined monthly pool ~8,100."
     },
-    "workers-comp": {
-      "keywords": [
-        { "kw": "workers compensation manufacturing", "vol": "med", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "sawmill workers comp", "vol": "very low", "cpc": "high", "diff": "low", "intent": "C" },
-        { "kw": "lumber mill workers compensation", "vol": "very low", "cpc": "high", "diff": "low", "intent": "C" },
-        { "kw": "manufacturing workers comp class codes", "vol": "low", "cpc": "med", "diff": "med", "intent": "I" }
-      ],
-      "paa": [
-        "What is the workers comp class code for lumber manufacturing?",
-        "How much is workers comp for manufacturing employees?"
-      ]
+    {
+      "keyword": "subcontractor insurance",
+      "volume": 720,
+      "cpc": 66.66,
+      "difficulty": 0,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "Framing contractors are subcontractors. Difficulty 0 is a significant opportunity for a new domain."
     },
-    "commercial-auto": {
-      "keywords": [
-        { "kw": "commercial auto insurance manufacturer", "vol": "low-med", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "flatbed trucking insurance", "vol": "med", "cpc": "high", "diff": "high", "intent": "C" },
-        { "kw": "oversize load insurance", "vol": "low", "cpc": "med", "diff": "med", "intent": "C" },
-        { "kw": "delivery fleet insurance", "vol": "low-med", "cpc": "med", "diff": "med", "intent": "C" }
-      ],
-      "paa": [
-        "Do I need special insurance to haul oversize loads?",
-        "Does commercial auto cover loading and unloading?"
-      ]
+    {
+      "keyword": "contractor insurance",
+      "volume": 4400,
+      "cpc": 97.15,
+      "difficulty": 20,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "High-volume, high-CPC umbrella term. Good homepage secondary/supporting target."
     },
-    "inland-marine": {
-      "keywords": [
-        { "kw": "inland marine insurance", "vol": "med", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "stock throughput insurance", "vol": "very low", "cpc": "med", "diff": "low", "intent": "C" },
-        { "kw": "installation floater insurance", "vol": "low", "cpc": "med", "diff": "med", "intent": "C" },
-        { "kw": "goods in transit insurance", "vol": "low-med", "cpc": "med", "diff": "med", "intent": "C" }
-      ],
-      "paa": [
-        "What is stock throughput insurance?",
-        "What does an installation floater cover?"
-      ]
+    {
+      "keyword": "builders risk insurance",
+      "volume": 9900,
+      "cpc": 22.37,
+      "difficulty": 10,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "Highest raw volume of all terms. Framers work on projects requiring builders risk. Service page target."
     },
-    "umbrella": {
-      "keywords": [
-        { "kw": "commercial umbrella insurance", "vol": "med", "cpc": "high", "diff": "high", "intent": "C/T" },
-        { "kw": "excess liability insurance manufacturer", "vol": "low", "cpc": "high", "diff": "med", "intent": "C" }
-      ],
-      "paa": [
-        "How much umbrella insurance does a manufacturer need?"
-      ]
+    {
+      "keyword": "surety bond contractor",
+      "volume": 4400,
+      "cpc": 44.6,
+      "difficulty": 14,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "Strong volume, low difficulty. Many framing contractors need license and performance bonds."
     },
-    "business-interruption": {
-      "keywords": [
-        { "kw": "business interruption insurance manufacturer", "vol": "low-med", "cpc": "high", "diff": "med", "intent": "C" },
-        { "kw": "contingent business interruption insurance", "vol": "low", "cpc": "high", "diff": "med", "intent": "I/C" }
-      ],
-      "paa": [
-        "How is business interruption calculated for a plant?",
-        "What is extra expense coverage?"
-      ]
-    },
-    "professional-liability": {
-      "keywords": [
-        { "kw": "manufacturers E&O insurance", "vol": "low", "cpc": "high", "diff": "med", "intent": "C" },
-        { "kw": "professional liability manufacturer", "vol": "low", "cpc": "med", "diff": "med", "intent": "C" }
-      ],
-      "paa": [
-        "Do manufacturers need professional liability insurance?"
-      ]
+    {
+      "keyword": "construction insurance",
+      "volume": 2900,
+      "cpc": 70.12,
+      "difficulty": 8,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "Broad term with very low difficulty (8). Good supporting target for homepage and blog content."
     }
-  },
-  "geo_modifiers": [
-    "Oregon glulam insurance", "Washington mass timber insurance",
-    "Alabama glulam manufacturer insurance", "Georgia lumber mill insurance",
-    "Texas engineered wood insurance", "California glulam insurance",
-    "North Carolina lumber insurance", "Minnesota wood products insurance"
   ],
-  "owned_exact_match": [
-    "glulam manufacturer insurance",
-    "glue laminated timber manufacturer insurance",
-    "glulam manufacturer insurance cost"
+  "secondary_keywords": [
+    {
+      "keyword": "construction liability insurance",
+      "volume": 590,
+      "cpc": 84.22,
+      "difficulty": 22,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "High CPC, moderate difficulty. Secondary target for GL service page."
+    },
+    {
+      "keyword": "carpentry insurance",
+      "volume": 880,
+      "cpc": 43.82,
+      "difficulty": 0,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "Framers overlap with carpenters in insurer classification. Difficulty 0 — easy win. Blog or service variant target."
+    },
+    {
+      "keyword": "tools and equipment insurance",
+      "volume": 320,
+      "cpc": 21.15,
+      "difficulty": 9,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "Framing crews carry significant tool and equipment value. Target tools and equipment service page."
+    },
+    {
+      "keyword": "workers comp construction",
+      "volume": 90,
+      "cpc": 132.03,
+      "difficulty": 9,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "CPC $132 — highest CPC in the set. Very strong buyer intent. Workers comp service page target."
+    },
+    {
+      "keyword": "workers compensation contractor",
+      "volume": 390,
+      "cpc": 82.87,
+      "difficulty": null,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "High CPC. Secondary target for workers comp service page."
+    },
+    {
+      "keyword": "construction business insurance",
+      "volume": 480,
+      "cpc": 102.48,
+      "difficulty": 18,
+      "competition": "MEDIUM",
+      "intent": "commercial",
+      "notes": "High CPC signals buyers. Secondary homepage and blog target."
+    },
+    {
+      "keyword": "roofing contractor insurance",
+      "volume": 480,
+      "cpc": 82.09,
+      "difficulty": 15,
+      "competition": "LOW",
+      "intent": "commercial",
+      "notes": "Adjacent niche. Framing and roofing are closely related trades. Blog comparison/crosslink target."
+    },
+    {
+      "keyword": "carpentry contractor insurance",
+      "volume": 10,
+      "cpc": null,
+      "difficulty": null,
+      "competition": null,
+      "intent": "commercial",
+      "notes": "Very low volume but exact intent. Use naturally in on-page copy."
+    },
+    {
+      "keyword": "construction subcontractor insurance",
+      "volume": 10,
+      "cpc": 48.27,
+      "difficulty": null,
+      "competition": "HIGH",
+      "intent": "commercial",
+      "notes": "Niche term with high CPC ($48) relative to volume — advertisers value it. Include in copy."
+    },
+    {
+      "keyword": "contractor liability",
+      "volume": 210,
+      "cpc": 75.75,
+      "difficulty": null,
+      "competition": "LOW",
+      "intent": "informational",
+      "notes": "Mixed intent. Good blog topic around contractor liability exposure and risk."
+    }
+  ],
+  "long_tail": [
+    {
+      "keyword": "framing contractor general liability insurance",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Sub-10 volume but highest-intent search. Target homepage body copy and GL service page."
+    },
+    {
+      "keyword": "framing contractor workers compensation",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Zero volume but high conversion intent when searched. Target workers comp service page."
+    },
+    {
+      "keyword": "insurance for framing contractors",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Natural language variant. Use in FAQ and structured content for voice search coverage."
+    },
+    {
+      "keyword": "framing contractor liability insurance",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Slight variant of primary keyword. Use in body copy and meta descriptions."
+    },
+    {
+      "keyword": "framing subcontractor liability",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Addresses the subcontractor framing scenario. Target homepage and subcontractor-focused blog post."
+    },
+    {
+      "keyword": "residential framing insurance",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "No Google Ads volume — too narrow. Use naturally in residential framing blog content."
+    },
+    {
+      "keyword": "commercial framing insurance",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "No volume data. Use naturally in commercial framing blog content."
+    },
+    {
+      "keyword": "completed operations coverage for framing contractors",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "informational",
+      "notes": "Critical differentiator. Framing defects often surface years post-completion. Strong blog and FAQ topic."
+    },
+    {
+      "keyword": "framing crew workers comp",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Crew-level search variant. Workers comp page and FAQ target."
+    },
+    {
+      "keyword": "wood framing contractor insurance",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Material-specific variant. Most residential framing is wood. Blog content target."
+    },
+    {
+      "keyword": "steel framing contractor insurance",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Commercial framing variant. Light-gauge steel framing common in commercial construction."
+    },
+    {
+      "keyword": "rough framing insurance",
+      "volume": null,
+      "cpc": null,
+      "difficulty": null,
+      "intent": "commercial",
+      "notes": "Trade-specific term. Use in blog and FAQ for trade familiarity signals to Google."
+    }
+  ],
+  "paa_questions": [
+    "What insurance do framing contractors need?",
+    "How much does framing contractor insurance cost?",
+    "Do framing contractors need workers comp insurance?",
+    "What is completed operations coverage for a framing contractor?",
+    "Does a framing subcontractor need their own insurance?",
+    "What general liability limits do framing contractors typically carry?",
+    "Is framing considered high-risk for insurance purposes?",
+    "What tools and equipment coverage do framing crews need?"
   ]
 }
