@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import {
-  ShieldCheck, HardHat, FlaskConical, Truck, Wrench, FileCheck,
-  Building2, Umbrella, PackageCheck, Factory, Gauge, Boxes, ArrowRight,
+  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck,
+  Umbrella, Factory, ArrowRight,
 } from "lucide-react";
 import { SERVICES } from "@/lib/site";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 const ICONS = {
-  ShieldCheck, HardHat, FlaskConical, Truck, Wrench, FileCheck,
-  Building2, Umbrella, PackageCheck, Factory, Gauge, Boxes,
+  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck, Umbrella, Factory,
 } as const;
 
 export function ServicesGrid() {
@@ -24,17 +23,17 @@ export function ServicesGrid() {
           </span>
           <h2 className="mt-3 h-section">
             Coverage built specifically for{" "}
-            <span className="text-clay">glulam manufacturers</span>.
+            <span className="text-clay">framing contractors</span>.
           </h2>
           <p className="mt-4 lead">
-            Standard markets leave products liability gaps and misclassify kiln workers. We build programs designed for timber manufacturing.
+            Standard markets exclude work at height and misclassify carpentry crews. We build programs designed for the way framers actually work.
           </p>
         </FadeIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {SERVICES.map((service, i) => {
             const Icon = ICONS[service.icon as keyof typeof ICONS] ?? ShieldCheck;
-            const isFeatured = service.slug === "product-liability";
+            const isFeatured = service.slug === "general-liability";
             return (
               <FadeIn key={service.slug} delay={(i % 4) * 0.05}>
                 <Link
@@ -47,7 +46,7 @@ export function ServicesGrid() {
                 >
                   {isFeatured && (
                     <span className="absolute -top-2.5 right-5 pill-gold !bg-gold !text-espresso !border-gold-dark">
-                      Essential coverage
+                      Core coverage
                     </span>
                   )}
                   <div

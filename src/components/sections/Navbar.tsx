@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Layers } from "lucide-react";
+import { Menu, X, Phone, Hammer } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -36,17 +36,17 @@ export function Navbar() {
     >
       <nav className="container-wide flex items-center justify-between h-18 py-3">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group" aria-label="Glulam Manufacturer Insurance home">
+        <Link href="/" className="flex items-center gap-2.5 group" aria-label="Framing Contractor Insurance home">
           <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-clay-gradient shadow-warm">
-            <Layers className="h-5 w-5 text-white" strokeWidth={2.4} />
+            <Hammer className="h-5 w-5 text-white" strokeWidth={2.4} />
             <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-gold border-2 border-cream" />
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-heading font-extrabold text-espresso text-[1.05rem] tracking-tight">
-              Glulam Mfr.
+              Framing
             </span>
             <span className="font-heading font-semibold text-clay text-[0.65rem] uppercase tracking-[0.18em]">
-              Mfr Insurance
+              Contractor Insurance
             </span>
           </span>
         </Link>

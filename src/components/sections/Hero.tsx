@@ -20,9 +20,9 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-warm-radial pt-32 pb-20 md:pt-40 md:pb-28">
-      {/* Decorative laminate band at top */}
+      {/* Decorative stud band at top */}
       <div className="absolute top-24 inset-x-0 h-px horizon-band opacity-70" aria-hidden />
-      {/* Glulam lam-line motif */}
+      {/* Framing stud motif */}
       <div className="absolute right-6 bottom-0 w-3 h-64 horizon-band opacity-30 hidden lg:block rounded-full" aria-hidden />
 
       <div className="container-wide relative">
@@ -32,7 +32,7 @@ export function Hero() {
             <motion.div {...item}>
               <span className="pill-clay">
                 <span className="h-1.5 w-1.5 rounded-full bg-clay animate-pulse" />
-                Pacific NW · Rocky Mountain · National
+                Residential · Commercial · Multifamily
               </span>
             </motion.div>
 
@@ -40,12 +40,12 @@ export function Hero() {
               {...item}
               className="mt-5 font-heading font-extrabold text-espresso text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl leading-[1.05] tracking-tight"
             >
-              Glulam manufacturer insurance that covers{" "}
+              Framing contractor insurance that covers{" "}
               <span className="relative z-10 bg-gradient-to-r from-clay via-clay-light to-gold-dark bg-clip-text text-transparent">your biggest risks</span>.
             </motion.h1>
 
             <motion.p {...item} className="mt-6 lead max-w-xl">
-              Products liability, commercial property, workers' comp, and inland marine — purpose-built for glue-laminated timber plants. A-rated carriers. 15-minute quotes.
+              General liability, workers&rsquo; comp, builder&rsquo;s risk, and tools floaters — purpose-built for framing and rough-carpentry crews. Fall, nail-gun, and saw exposures underwritten right. A-rated carriers. 15-minute quotes.
             </motion.p>
 
             <motion.div {...item} className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -75,7 +75,7 @@ export function Hero() {
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Star className="h-4 w-4 text-gold fill-gold" />
-                20+ years insuring industry
+                20+ years insuring trades
               </span>
             </motion.div>
           </motion.div>
@@ -87,13 +87,12 @@ export function Hero() {
             animate={prefersReduced ? {} : { opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            {/* Beam-edge frame */}
             <div className="relative">
-              {/* main hero image in a beam shape */}
+              {/* main hero image */}
               <div className="relative overflow-hidden rounded-t-[6rem] rounded-b-3xl shadow-warm-lg border-4 border-white">
                 <img
                   src="/images/hero.jpg"
-                  alt="Glulam manufacturing plant — structural beams in production"
+                  alt="Framing crew raising an exterior wall on a new home build"
                   className="w-full h-[420px] md:h-[520px] object-cover"
                   loading="eager"
                 />
@@ -113,10 +112,10 @@ export function Hero() {
                   </div>
                   <div>
                     <p className="font-heading font-extrabold text-espresso text-2xl leading-none">
-                      47+
+                      600+
                     </p>
                     <p className="text-xs text-mocha mt-1 leading-snug">
-                      Glulam manufacturers insured — plants, mills, timber operations
+                      Framing crews insured — residential, commercial & multifamily
                     </p>
                   </div>
                 </div>
@@ -139,4 +138,3 @@ export function Hero() {
     </section>
   );
 }
-
