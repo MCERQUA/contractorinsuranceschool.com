@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms governing your use of gluelammanufacturerinsurance.com and the services of Contractors Choice Agency.",
+  description: "Terms governing your use of framingcontractorinsurance.com and the services of Contractors Choice Agency.",
   alternates: { canonical: `${SITE.url}/terms` },
   robots: { index: false, follow: true },
 };

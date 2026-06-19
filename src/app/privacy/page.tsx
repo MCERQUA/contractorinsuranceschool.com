@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Glulam Manufacturer Insurance and Contractors Choice Agency collect, use, and protect your information.",
+  description: "How Framing Contractor Insurance and Contractors Choice Agency collect, use, and protect your information.",
   alternates: { canonical: `${SITE.url}/privacy` },
   robots: { index: false, follow: true },
 };
