@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Generate all images for gluelammanufacturerinsurance.com via HuggingFace FLUX.1-schnell
+# Generate all images for framingcontractorinsurance.com via HuggingFace FLUX.1-schnell
 # Robust: retries up to 4 times, verifies each is a valid image >= 30KB
 set -uo pipefail
 
-OUT="/workspace/Websites/gluelammanufacturerinsurance.com/public/images"
+OUT="/workspace/Websites/framingcontractorinsurance.com/public/images"
 mkdir -p "$OUT"
 
 gen() {
@@ -39,34 +39,40 @@ gen() {
   return 1
 }
 
-# === 9 images — glue-laminated timber (glulam) MANUFACTURING ===
+# === 11 images — framing contractor operations ===
 
 gen "hero.jpg" \
-  "Photorealistic cinematic wide shot inside a modern glue-laminated timber glulam manufacturing facility. Enormous long curved glulam beams moving along an overhead conveyor, warm industrial lighting, workers in hi-vis vests and hard hats operating hydraulic presses, neat stacks of laminated timber. Clean bright professional industrial photography, warm amber and deep steel-blue tones, high-end commercial photography, no text, no watermark" 4
+  "Photorealistic cinematic wide shot of a residential wood framing crew raising an exterior wall frame on a new house build. Workers in hi-vis vests and hard hats, nail guns, bright clear morning light, exposed studs and engineered floor trusses, organized jobsite with lumber package. Warm natural wood tones with deep forest-green and copper accents, high-end commercial construction photography, no text, no watermark" 4
 
-gen "glulam-beams.jpg" \
-  "Photorealistic photo of finished long straight glue-laminated timber beams neatly stacked inside a bright modern mass-timber manufacturing plant. Visible laminated wood layers and finger joints, smooth sanded surface, warm natural wood grain, industrial ceiling lights, shallow depth of field, professional commercial photography, no text" 4
+gen "framing-walls.jpg" \
+  "Photorealistic photo of two framing carpenters assembling a wood stud wall on the deck of a house under construction, measuring and nailing 2x6 studs, nail gun in action, neat sawhorses and lumber, blue sky. Professional construction photography, warm wood tones, shallow depth of field, no text" 4
 
-gen "production-line.jpg" \
-  "Photorealistic photo of a glulam production line: structural adhesive glue being evenly spread between stacked lumber lamstock layers on a long industrial bed, worker in hi-vis vest and hard hat monitoring the glue-spreader machine, hydraulic laminating press in background. Clean bright factory, warm industrial lighting, detailed machinery, professional industrial photography, no text" 4
+gen "truss-roof.jpg" \
+  "Photorealistic photo of roof trusses being set on a new home frame, crane lowering a wooden roof truss into place, framers guiding it on top plates, sunny day, structural roof skeleton. Professional commercial construction photography, warm tones, no text" 4
 
-gen "kiln.jpg" \
-  "Photorealistic photo of an industrial lumber drying kiln at a glulam manufacturing plant: large stainless-steel kiln chamber with stacked lumber on stickers visible through the open door, light steam, temperature and moisture gauges, technician checking wood moisture content with a meter. Bright industrial setting, professional photography, no text" 4
+gen "jobsite.jpg" \
+  "Photorealistic elevated photo of an active residential framing jobsite: a partially framed two-story house skeleton with stacked lumber, chop saw station, air compressor, framers working on multiple levels. Clear daylight, organized site, professional construction photography, no text" 4
 
-gen "lumber-yard.jpg" \
-  "Photorealistic elevated photo of a large organized lumber yard at a glulam manufacturing facility: neat rows of stacked dimensional lumber on dunnage under a blue sky, forklift moving bundled lamstock, forested mountains in the background, bright clear daylight, professional commercial photography, no text" 4
+gen "crew-portrait.jpg" \
+  "Photorealistic professional portrait of a confident framing contractor wearing a hard hat, safety glasses and branded flannel shirt, arms crossed, standing on a home building site with framed walls behind him. Warm friendly genuine trustworthy expression, golden hour light, commercial photography, no text" 4
 
-gen "cnc-finish.jpg" \
-  "Photorealistic close-up of a large CNC machining center cutting a precise curved profile into a thick glue-laminated timber beam, wood chips airborne, operator overseeing at a control panel, modern mass-timber factory floor, warm lighting, sharp detail, professional industrial photography, no text" 4
+gen "commercial-build.jpg" \
+  "Photorealistic photo of a large commercial or multifamily building under construction, steel-and-wood framing, multiple framers on scaffolding installing floor and wall systems, crane in background, bright industrial daylight. Professional commercial construction photography, no text" 4
 
-gen "mill-portrait.jpg" \
-  "Photorealistic professional portrait of a glulam manufacturing plant manager wearing a hard hat and branded work shirt, standing confidently with arms crossed on the factory floor with finished glulam beams behind him. Warm friendly genuine expression, trustworthy, bright industrial background, golden hour light through factory windows, commercial photography, no text" 4
+gen "scaffold-safety.jpg" \
+  "Photorealistic photo of framing carpenters working safely on pump-jack scaffolding and a framed two-story wall, wearing fall protection harnesses and hard hats, installing sheathing. Bright daylight, focus on safety, professional construction photography, no text" 4
 
-gen "architectural-glulam.jpg" \
-  "Photorealistic architectural interior of a completed building with exposed soaring glue-laminated timber beams and columns: a modern worship or sports space with dramatic tall curved glulam arches, warm natural wood ceiling, large windows with daylight streaming in. Premium architectural photography, warm tones, awe-inspiring scale, no text" 4
+gen "lumber-package.jpg" \
+  "Photorealistic photo of a fresh lumber package neatly stacked on a residential jobsite, dimensional lumber and engineered I-joists on dunnage, a framers truck in the background, blue sky. Professional commercial photography, warm natural wood tones, no text" 4
 
-gen "press-control.jpg" \
-  "Photorealistic photo of a massive hydraulic laminating press in a glulam factory closing on a long stack of glued lumber, operator at a control panel with pressure gauges, dramatic industrial lighting, steel and warm wood, professional heavy-industry photography, no text" 4
+gen "blueprint-tools.jpg" \
+  "Photorealistic close-up of rolled architectural house plans and blueprints resting on a sawhorse next to a framing square, pencil, tape measure and a framing nailer, soft warm light, shallow depth of field. Professional commercial photography, no text" 4
+
+gen "nail-gun-action.jpg" \
+  "Photorealistic action close-up of a framing carpenter firing a pneumatic nail gun into a top plate, wood grain and sawdust visible, gloved hands, bright jobsite light, sharp detail. Professional construction photography, warm tones, no text" 4
+
+gen "og-image.jpg" \
+  "Photorealistic cinematic wide banner image of a framing crew raising a wall on a new home build, warm natural wood tones, professional commercial construction photography, wide composition, no text, no watermark" 4
 
 echo "=== ALL IMAGE GENERATION ATTEMPTS COMPLETE ==="
 ls -la "$OUT"
