@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck, Building2, Umbrella, Factory,
+  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck, Factory, Umbrella,
 } as const;
 
 export const metadata: Metadata = {
