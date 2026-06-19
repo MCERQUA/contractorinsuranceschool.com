@@ -1,0 +1,31 @@
+{
+  "niche": "Framing contractor insurance (wood framing & rough carpentry)",
+  "seed": ["framing contractor insurance", "framer insurance", "rough carpentry insurance"],
+  "keywords": [
+    { "keyword": "framing contractor insurance", "msv": 720, "kd": 28, "intent": "commercial" },
+    { "keyword": "framing contractor insurance cost", "msv": 480, "kd": 22, "intent": "commercial" },
+    { "keyword": "general liability insurance for framing contractors", "msv": 390, "kd": 30, "intent": "commercial" },
+    { "keyword": "workers comp class code 5403", "msv": 850, "kd": 18, "intent": "informational" },
+    { "keyword": "framing subcontractor insurance", "msv": 320, "kd": 24, "intent": "commercial" },
+    { "keyword": "builder's risk insurance framing", "msv": 210, "kd": 26, "intent": "commercial" },
+    { "keyword": "contractor tools and equipment insurance", "msv": 950, "kd": 34, "intent": "commercial" },
+    { "keyword": "carpentry contractor insurance", "msv": 590, "kd": 29, "intent": "commercial" },
+    { "keyword": "framing contractor workers comp", "msv": 260, "kd": 25, "intent": "commercial" },
+    { "keyword": "framer general liability height exclusion", "msv": 70, "kd": 12, "intent": "informational" },
+    { "keyword": "contractor license bond cost", "msv": 430, "kd": 27, "intent": "commercial" },
+    { "keyword": "commercial auto contractor trucks", "msv": 210, "kd": 31, "intent": "commercial" },
+    { "keyword": "jobsite lumber theft insurance", "msv": 50, "kd": 9, "intent": "informational" },
+    { "keyword": "installation floater contractor", "msv": 170, "kd": 20, "intent": "commercial" },
+    { "keyword": "umbrella insurance contractor", "msv": 640, "kd": 33, "intent": "commercial" },
+    { "keyword": "how much is framing contractor insurance", "msv": 150, "kd": 16, "intent": "informational" }
+  ],
+  "paa": [
+    "What insurance does a framing contractor need?",
+    "How much is general liability for a framer?",
+    "What is workers comp class code 5403?",
+    "Does general liability cover falls from height?",
+    "Is stolen lumber covered by insurance?",
+    "Do framers need builder's risk insurance?",
+    "Are subcontractors covered under my GL?"
+  ]
+}
