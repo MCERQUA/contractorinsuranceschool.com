@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   FRAMING CONTRACTOR INSURANCE — "Timber Frame" Design System
+   Light · corporate · stud-wall + blueprint-grid motif
+   (token NAMES inherited; VALUES remapped: clay=forest green, sage=copper, gold=amber)
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --bg-cream: #FBF8F3;       /* paper */
+    --bg-sand: #F2EDE3;        /* stone */
+    --bg-white: #FFFFFF;
+
+    /* Brand */
+    --clay: #1F4D3A;           /* primary — forest green */
+    --clay-dark: #163A2C;
+    --sage: #B5651D;           /* secondary — copper */
+    --gold: #E0A45A;           /* accent — amber */
+
+    /* Text */
+    --espresso: #1A2620;       /* headings */
+    --cocoa: #3F4A44;          /* body */
+    --mocha: #6B7872;          /* muted */
+
+    /* Border */
+    --adobe: #E2DCD0;          /* birch */
+
+    --radius: 1rem;
+  }
+
+  * {
+    border-color: var(--adobe);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--cocoa);
+    font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    color: var(--espresso);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  ::selection {
+    background: rgba(31, 77, 58, 0.16);
+    color: var(--espresso);
+  }
+}
+
+@layer components {
+  /* === Container === */
+  .container-tight {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* === Buttons === */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
+           bg-clay text-white font-heading font-semibold text-base
+           shadow-warm hover:bg-clay-dark hover:shadow-warm-lg
+           hover:-translate-y-0.5 transition-all duration-200
+           focus:outline-none focus:ring-4 focus:ring-clay/25;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
+           bg-white text-espresso font-heading font-semibold text-base
+           border-2 border-adobe hover:border-clay hover:text-clay
+           hover:-translate-y-0.5 transition-all duration-200
+           focus:outline-none focus:ring-4 focus:ring-clay/15;
+  }
+  .btn-sage {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
+           bg-sage text-white font-heading font-semibold text-base
+           shadow-warm hover:bg-sage-dark hover:shadow-warm-lg
+           hover:-translate-y-0.5 transition-all duration-200
+           focus:outline-none focus:ring-4 focus:ring-sage/25;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full
+           text-cocoa font-medium text-sm hover:bg-sand hover:text-clay
+           transition-colors duration-200;
+  }
+
+  /* === Cards === */
+  .card-warm {
+    @apply bg-white rounded-3xl border border-adobe shadow-card
+           hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300;
+  }
+  /* Frame card — white card with a forest→copper→amber stud top edge */
+  .card-arch {
+    @apply bg-white border border-adobe shadow-card rounded-3xl
+           relative overflow-hidden hover:shadow-card-hover
+           hover:-translate-y-1 transition-all duration-300;
+  }
+  .card-arch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #1F4D3A 0%, #2E6B52 22%, #B5651D 55%, #E0A45A 100%);
+  }
+  .pill {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+           text-xs font-heading font-semibold uppercase tracking-wider;
+  }
+  .pill-clay {
+    @apply pill bg-clay/10 text-clay border border-clay/20;
+  }
+  .pill-sage {
+    @apply pill bg-sage/10 text-sage-dark border border-sage/25;
+  }
+  .pill-gold {
+    @apply pill bg-gold/20 text-sage-dark border border-gold/40;
+  }
+
+  /* === Section headings === */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.18em]
+           text-clay;
+  }
+  .h-section {
+    @apply font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-espresso leading-[1.1];
+  }
+  .lead {
+    @apply text-lg md:text-xl text-mocha leading-relaxed;
+  }
+
+  /* === Decorative motifs — stud-wall + blueprint grid === */
+  .bg-sonoran {
+    background-color: var(--bg-cream);
+    background-image:
+      radial-gradient(circle at 15% 15%, rgba(181, 101, 29, 0.08) 0%, transparent 35%),
+      radial-gradient(circle at 85% 75%, rgba(31, 77, 58, 0.06) 0%, transparent 40%);
+  }
+  .bg-sonoran-sand {
+    background-color: var(--bg-sand);
+    background-image:
+      radial-gradient(circle at 70% 20%, rgba(31, 77, 58, 0.06) 0%, transparent 45%),
+      radial-gradient(circle at 20% 80%, rgba(181, 101, 29, 0.07) 0%, transparent 40%);
+  }
+  .bg-warm-radial {
+    background:
+      radial-gradient(ellipse at top, rgba(181, 101, 29, 0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at bottom right, rgba(31, 77, 58, 0.06) 0%, transparent 50%),
+      var(--bg-cream);
+  }
+  /* Stud-wall band — stacked framing layers (green / copper / amber) */
+  .horizon-band {
+    background: linear-gradient(180deg,
+      #1F4D3A 0% 16%,
+      #B5651D 16% 30%,
+      #E0A45A 30% 44%,
+      #B5651D 44% 58%,
+      #1F4D3A 58% 72%,
+      #B5651D 72% 86%,
+      #E0A45A 86% 100%
+    );
+  }
+  /* Blueprint grid texture for hero / CTA bands */
+  .grain {
+    background-image:
+      linear-gradient(rgba(31,77,58,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31,77,58,0.05) 1px, transparent 1px),
+      repeating-linear-gradient(92deg,
+        rgba(31,77,58,0.0) 0px,
+        rgba(31,77,58,0.0) 10px,
+        rgba(255,255,255,0.025) 10px,
+        rgba(255,255,255,0.025) 11px);
+    background-size: 48px 48px, 48px 48px, auto;
+  }
+  .dotted-warm {
+    background-image: radial-gradient(circle, rgba(31, 77, 58, 0.14) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  /* Stud divider — short stacked framing member */
+  .arch-divider {
+    position: relative;
+    height: 3rem;
+    width: 100%;
+  }
+  .arch-divider::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 10rem;
+    height: 1.4rem;
+    background: linear-gradient(90deg,
+      #1F4D3A 0% 16%,
+      #B5651D 16% 38%,
+      #E0A45A 38% 60%,
+      #B5651D 60% 82%,
+      #1F4D3A 82% 100%);
+    border-radius: 0.5rem;
+    opacity: 0.92;
+  }
+
+  /* === Prose for blog === */
+  .prose-warm {
+    @apply max-w-none;
+  }
+  .prose-warm h2 {
+    @apply font-heading font-bold text-2xl md:text-3xl text-espresso mt-12 mb-4;
+  }
+  .prose-warm h3 {
+    @apply font-heading font-bold text-xl md:text-2xl text-espresso mt-8 mb-3;
+  }
+  .prose-warm p {
+    @apply text-cocoa leading-relaxed mb-5 text-[1.05rem];
+  }
+  .prose-warm ul {
+    @apply my-5 space-y-2 pl-0 list-none;
+  }
+  .prose-warm li {
+    @apply text-cocoa leading-relaxed pl-7 relative;
+  }
+  /* Stud-tick bullet — small green/copper/amber framing mark */
+  .prose-warm li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 1.1rem;
+    height: 0.5rem;
+    background: linear-gradient(90deg, #1F4D3A 0% 30%, #B5651D 30% 65%, #E0A45A 65% 100%);
+    border-radius: 0.15rem;
+    opacity: 0.9;
+  }
+  .prose-warm strong {
+    @apply text-espresso font-semibold;
+  }
+  .prose-warm a {
+    @apply text-sage-dark font-semibold underline decoration-gold/60 underline-offset-2 hover:decoration-sage;
+  }
+  .prose-warm blockquote {
+    @apply border-l-4 border-sage pl-5 py-2 my-6 text-espresso italic font-heading;
+  }
+}
+
+/* === Animations === */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes shimmer-line {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-sand);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clay);
+  border-radius: 6px;
+  border: 2px solid var(--bg-sand);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clay-dark);
+}
+
+/* === Focus visible === */
+:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
