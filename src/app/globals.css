@@ -3,24 +3,25 @@
 @tailwind utilities;
 
 /* ============================================================
-   CONTRACTOR INSURANCE INFO — "Editorial Information Hub" Design System
-   Stitch-generated: clean white + electric blue + slate
-   Newspaper/magazine authority — content-first, dense info hierarchy
+   CONTRACTOR INSURANCE SCHOOL — "Dark Tech Education" Design System
+   Stitch-generated: dark slate + emerald accent + JetBrains Mono labels
+   Dark-first, course-module aesthetic — think coding bootcamp + insurance
    ============================================================ */
 
 @layer base {
   :root {
-    --bg-cream: #ffffff;
-    --bg-sand: #f8fafc;
+    --bg-cream: #0f172a;
+    --bg-sand: #1e293b;
     --bg-white: #ffffff;
-    --clay: #2563eb;
-    --clay-dark: #1d4ed8;
-    --sage: #0f172a;
-    --espresso: #0f172a;
-    --cocoa: #334155;
-    --mocha: #64748b;
-    --adobe: #e2e8f0;
-    --radius: 0.5rem;
+    --clay: #10b981;
+    --clay-dark: #059669;
+    --clay-light: #34d399;
+    --sage: #1e293b;
+    --espresso: #f1f5f9;
+    --cocoa: #cbd5e1;
+    --mocha: #94a3b8;
+    --adobe: #334155;
+    --radius: 0.75rem;
   }
 
   * { border-color: var(--adobe); }
@@ -42,14 +43,14 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), system-ui, sans-serif;
     color: var(--espresso);
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
     font-weight: 700;
     line-height: 1.1;
   }
 
   ::selection {
-    background: rgba(37, 99, 235, 0.12);
-    color: var(--espresso);
+    background: rgba(16, 185, 129, 0.20);
+    color: #ffffff;
   }
 }
 
@@ -57,111 +58,115 @@
   .container-tight { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
   .container-wide { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
 
-  /* Blue CTA — clean, editorial, no-nonsense */
+  /* Emerald CTA — tech-education primary */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
            bg-clay text-white font-body font-semibold text-sm
            hover:bg-clay-dark hover:-translate-y-0.5
-           shadow-sm hover:shadow-warm
+           shadow-warm hover:shadow-emerald-glow
            transition-all duration-150
            focus:outline-none focus:ring-2 focus:ring-clay/40;
   }
-  /* Outline button — slate border on white */
+  /* Outline button — emerald border on dark */
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
-           bg-white text-espresso font-body font-semibold text-sm
-           border border-adobe hover:border-clay hover:text-clay
+           bg-transparent text-clay font-body font-semibold text-sm
+           border border-clay hover:bg-clay hover:text-white
            hover:-translate-y-0.5 transition-all duration-150
            focus:outline-none focus:ring-2 focus:ring-clay/20;
   }
-  /* Dark button — for use on white/light sections */
+  /* Slate button — for card surfaces */
   .btn-sage {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
-           bg-sage text-white font-body font-semibold text-sm
-           hover:bg-sage-light hover:-translate-y-0.5
-           shadow-sm hover:shadow-warm
-           transition-all duration-150
-           focus:outline-none focus:ring-2 focus:ring-sage/25;
+           bg-sage text-espresso font-body font-semibold text-sm border border-adobe
+           hover:border-clay hover:text-clay hover:-translate-y-0.5
+           shadow-sm transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-clay/25;
   }
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md
-           text-mocha font-medium text-sm hover:bg-sand hover:text-clay
+           text-mocha font-medium text-sm hover:bg-sage hover:text-clay
            transition-colors duration-150;
   }
 
-  /* Cards — editorial, bordered, no big rounding */
+  /* Cards — dark surface, emerald left border */
   .card-warm {
-    @apply bg-white rounded-lg border border-adobe shadow-card
+    @apply bg-sage rounded-xl border border-adobe shadow-card
            hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200;
   }
-  /* Article card — thin blue left border accent */
+  /* Course-module card — emerald 4px left border */
   .card-arch {
-    @apply bg-white border border-adobe shadow-card rounded-lg
-           relative overflow-hidden hover:shadow-card-hover
+    @apply bg-sage border border-adobe shadow-card rounded-xl
+           relative overflow-hidden hover:shadow-card-hover hover:border-clay
            hover:-translate-y-0.5 transition-all duration-200;
   }
   .card-arch::before {
     content: "";
     position: absolute;
     top: 0; left: 0; bottom: 0;
-    width: 3px;
-    background: #2563eb;
+    width: 4px;
+    background: #10b981;
   }
 
-  .pill { @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-body font-semibold uppercase tracking-[0.08em]; }
-  .pill-clay { @apply pill bg-blue-100 text-blue-700 border border-blue-200; }
-  .pill-sage { @apply pill bg-slate-100 text-slate-700 border border-slate-200; }
-  .pill-gold { @apply pill bg-blue-50 text-blue-600 border border-blue-200; }
+  .pill { @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-semibold uppercase tracking-[0.1em]; }
+  .pill-clay { @apply pill bg-clay/15 text-clay border border-clay/30; }
+  .pill-sage { @apply pill bg-sage text-mocha border border-adobe; }
+  .pill-gold { @apply pill bg-clay/10 text-clay border border-clay/20; }
 
-  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-body font-bold uppercase tracking-[0.14em] text-clay; }
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-[0.14em] text-clay; }
   .h-section { @apply font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-espresso leading-[1.1]; }
-  .lead { @apply text-lg md:text-xl text-mocha leading-relaxed; }
+  .lead { @apply text-lg md:text-xl text-cocoa leading-relaxed; }
 
-  /* ===== Editorial decorative motifs ===== */
+  /* Module number label — JetBrains Mono style */
+  .module-num {
+    @apply font-mono text-clay font-bold text-sm tracking-widest;
+  }
 
-  /* Pure white with very faint blue tint at top */
+  /* ===== Dark tech-education decorative motifs ===== */
+
+  /* Dark bg with emerald radial tint */
   .bg-sonoran {
-    background-color: #ffffff;
+    background-color: #0f172a;
     background-image:
-      radial-gradient(ellipse at top left, rgba(37,99,235,0.03) 0%, transparent 50%);
+      radial-gradient(ellipse at top left, rgba(16,185,129,0.08) 0%, transparent 50%);
   }
 
-  /* Slate-50 alt section */
+  /* Slate-800 alt section */
   .bg-sonoran-sand {
-    background-color: #f8fafc;
+    background-color: #1e293b;
     background-image:
-      radial-gradient(ellipse at top right, rgba(37,99,235,0.04) 0%, transparent 45%);
+      radial-gradient(ellipse at top right, rgba(16,185,129,0.06) 0%, transparent 45%);
   }
 
-  /* Barely-there warm radial for hero */
+  /* Dark hero with emerald glow */
   .bg-warm-radial {
     background:
-      radial-gradient(ellipse at top, rgba(37,99,235,0.04) 0%, transparent 55%),
-      #ffffff;
+      radial-gradient(ellipse at top, rgba(16,185,129,0.10) 0%, transparent 55%),
+      #0f172a;
   }
 
-  /* Editorial section divider — thin horizontal 1px rule */
+  /* Horizontal emerald rule */
   .horizon-band {
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, #e2e8f0 20%, #2563eb 50%, #e2e8f0 80%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, #334155 20%, #10b981 50%, #334155 80%, transparent 100%);
   }
 
-  /* Very subtle dot texture for stats sections */
+  /* Very subtle grid texture */
   .grain {
     background-image:
-      radial-gradient(circle, rgba(37,99,235,0.05) 1px, transparent 1px);
+      linear-gradient(rgba(51,65,85,0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(51,65,85,0.3) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 
-  /* Blue dot accent pattern */
   .dotted-warm {
-    background-image: radial-gradient(circle, rgba(37,99,235,0.10) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(16,185,129,0.10) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
-  .arch-divider { height: 1px; background: #e2e8f0; }
+  .arch-divider { height: 1px; background: #334155; }
 
-  /* Editorial prose — clean, readable, journalistic */
+  /* Dark prose — readable on dark backgrounds */
   .prose-warm { @apply max-w-none; }
   .prose-warm h2 { @apply font-heading font-bold text-2xl md:text-3xl text-espresso mt-12 mb-4; }
   .prose-warm h3 { @apply font-heading font-bold text-xl md:text-2xl text-espresso mt-8 mb-3; }
@@ -170,16 +175,19 @@
   .prose-warm li { @apply text-cocoa leading-relaxed pl-6 relative; }
   .prose-warm li::before {
     content: "";
-    position: absolute; left: 0; top: 0.6em;
-    width: 0.5rem; height: 0.5rem;
-    background: #2563eb;
+    position: absolute; left: 0; top: 0.65em;
+    width: 0.4rem; height: 0.4rem;
+    background: #10b981;
     border-radius: 50%;
   }
   .prose-warm strong { @apply text-espresso font-semibold; }
   .prose-warm a { @apply text-clay font-semibold underline decoration-clay/40 underline-offset-2 hover:decoration-clay; }
   .prose-warm blockquote { @apply border-l-4 border-clay pl-5 py-2 my-6 text-espresso italic; }
+  .prose-warm table { @apply w-full border-collapse my-6; }
+  .prose-warm th { @apply text-left font-heading font-bold text-espresso text-sm p-3 border-b border-adobe bg-sage; }
+  .prose-warm td { @apply text-cocoa text-sm p-3 border-b border-adobe/50; }
 
-  /* Dark utility sections */
+  /* Dark utility sections (backward compat) */
   .diva-dark { background: #0f172a; }
   .diva-surface { background-color: #1e293b; }
   .diva-near-black { background-color: #0f172a; }
@@ -198,7 +206,7 @@
 }
 
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--bg-sand); }
-::-webkit-scrollbar-thumb { background: var(--clay); border-radius: 6px; border: 2px solid var(--bg-sand); }
+::-webkit-scrollbar-track { background: #1e293b; }
+::-webkit-scrollbar-thumb { background: var(--clay); border-radius: 6px; border: 2px solid #1e293b; }
 ::-webkit-scrollbar-thumb:hover { background: var(--clay-dark); }
 :focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 4px; }
