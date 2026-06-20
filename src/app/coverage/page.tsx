@@ -61,13 +61,13 @@ export default function CoveragePage() {
               <h1 className="mt-5 font-heading font-extrabold text-espresso text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
                 National reach.{" "}
                 <span className="bg-gradient-to-r from-clay via-clay-light to-gold-dark bg-clip-text text-transparent">
-                  All 50 states, every framing market.
+                  All 50 states, every contractor market.
                 </span>
               </h1>
               <p className="mt-6 lead max-w-2xl mx-auto">
-                Contractors Choice Agency places framing contractor insurance programs in all 50 states —
-                from Texas and Sun-Belt production framers to Pacific Northwest and Rocky Mountain crews to
-                Northeast remodel and addition work.
+                Contractors Choice Agency places contractor insurance programs in all 50 states —
+                from Texas and Sun-Belt commercial crews to Pacific Northwest and Rocky Mountain contractors to
+                Northeast remodel and specialty trade work.
               </p>
             </FadeIn>
           </div>
@@ -78,7 +78,7 @@ export default function CoveragePage() {
           <div className="container-tight">
             <FadeIn className="max-w-2xl mb-10">
               <span className="eyebrow"><span className="h-px w-8 bg-clay" />Where we write</span>
-              <h2 className="mt-3 h-section">Framing regions we serve.</h2>
+              <h2 className="mt-3 h-section">Contractor regions we serve.</h2>
             </FadeIn>
             <div className="grid sm:grid-cols-2 gap-4">
               {AZ_REGIONS.map((region, i) => (
@@ -98,7 +98,7 @@ export default function CoveragePage() {
               <div className="rounded-3xl bg-espresso text-cream p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
                   <p className="font-heading font-extrabold text-2xl">Featured regions</p>
-                  <p className="text-cream/75 mt-1">Dedicated pages for key framing contractor regions.</p>
+                  <p className="text-cream/75 mt-1">Dedicated pages for key contractor markets.</p>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {LOCATIONS.map((l) => (
@@ -126,7 +126,7 @@ export default function CoveragePage() {
                   Licensed and writing in all 50 states
                 </h2>
                 <p className="mt-3 text-mocha max-w-2xl mx-auto leading-relaxed">
-                  Whether your crew frames in Texas, the Southeast, the Mountain West,
+                  Whether you work in Texas, the Southeast, the Mountain West,
                   or anywhere in between — one agent, one coordinated program. NPN #8608479.
                 </p>
                 <Link href="/quote" className="btn-primary mt-6">
