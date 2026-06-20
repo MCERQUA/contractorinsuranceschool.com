@@ -10,9 +10,9 @@ import Link from "next/link";
 import { MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Framing Contractor Insurance — National Coverage, All 50 States",
+  title: "Contractor Insurance Coverage — All 50 States | Contractor Insurance Info",
   description:
-    "Contractors Choice Agency writes framing contractor insurance in all 50 states — Texas and the Sun Belt, Southeast, Rocky Mountain, Pacific Northwest, Great Lakes, Northeast, and everywhere framers work.",
+    "Contractors Choice Agency writes contractor insurance programs in all 50 states — Texas and the Sun Belt, Southeast, Rocky Mountain, Pacific Northwest, Great Lakes, Northeast, and everywhere contractors work.",
   alternates: { canonical: `${SITE.url}/coverage` },
 };
 
@@ -28,24 +28,24 @@ export default function CoveragePage() {
 
   const faqs = buildPageFaqs([
     {
-      q: "Do you only insure framing contractors in certain regions?",
-      a: "No. Contractors Choice Agency is licensed in all 50 states and writes framing contractor programs for crews anywhere in the country — Texas and the Sun Belt, Southeast, Rocky Mountain, Pacific Northwest, Great Lakes, Northeast, and everywhere in between.",
+      q: "Do you only insure contractors in certain regions?",
+      a: "No. Contractors Choice Agency is licensed in all 50 states and writes contractor insurance programs for any trade anywhere in the country — Texas and the Sun Belt, Southeast, Rocky Mountain, Pacific Northwest, Great Lakes, Northeast, and everywhere in between.",
     },
     {
       q: "Can you write coverage if my crews work across multiple states?",
-      a: "Yes. Because we're licensed nationwide, a single program can follow your crews across state lines — GL, workers' comp, builder's risk, and tools coverage coordinated without gaps.",
+      a: "Yes. Because we're licensed nationwide, a single program can follow your crews across state lines — GL, workers' comp, commercial auto, and tools coverage coordinated without gaps.",
     },
     {
-      q: "Do you understand the risks of framing in hurricane and wildfire zones?",
-      a: "Yes. We have markets that write wind, named-storm, and WUI exposures and structure your builder's risk and property coverage so you're protected during the build in coastal, mountain, and interface zones.",
+      q: "Do you understand regional risks like hurricanes, wildfires, and seismic activity?",
+      a: "Yes. We have markets that write wind, named-storm, WUI, and seismic exposures and structure your program so you're protected for the specific regional risks where you work.",
     },
     {
       q: "How fast can I get a quote and certificate in my state?",
       a: "Typically 15 minutes for a standard program. Once bound, we turn around additional-insured certificates, waivers of subrogation, and license bonds usually within minutes — wherever you're building.",
     },
     {
-      q: "Do regional building codes affect my coverage?",
-      a: "They can. Wind, seismic, wildfire, and energy-code requirements vary regionally and influence both how you frame and how the risk is underwritten. We account for your region's code environment when structuring your program.",
+      q: "Do regional licensing and insurance requirements differ by state?",
+      a: "Yes. State contractor licensing boards set minimum insurance requirements that vary by trade, revenue, and project type. We account for your state's specific requirements when structuring your program.",
     },
   ], 20);
 
