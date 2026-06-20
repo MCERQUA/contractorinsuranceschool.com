@@ -160,32 +160,32 @@ export const PROCESS = [
 export const WHY_CHOOSE = [
   {
     title: "Contractor-only specialists",
-    body: "We only place contractor insurance. No personal lines, no restaurants, no retail — just contractors.",
+    description: "We only place contractor insurance. No personal lines, no restaurants, no retail — just contractors.",
     icon: HardHat,
   },
   {
     title: "20+ years of experience",
-    body: "Contractors Choice Agency has placed contractor programs since 2005. We know the markets, the exclusions, and the traps.",
+    description: "Contractors Choice Agency has placed contractor programs since 2005. We know the markets, the exclusions, and the traps.",
     icon: Award,
   },
   {
     title: "A+ rated carrier partners",
-    body: "We shop A.M. Best A-rated and A+ rated specialty contractor markets — not surplus lines scraps.",
+    description: "We shop A.M. Best A-rated and A+ rated specialty contractor markets — not surplus lines scraps.",
     icon: ShieldCheck,
   },
   {
     title: "15-minute quotes",
-    body: "Tell us about your business and we typically return a bindable quote in about 15 minutes.",
+    description: "Tell us about your business and we typically return a bindable quote in about 15 minutes.",
     icon: PhoneCall,
   },
   {
     title: "All 50 states",
-    body: "Licensed nationwide. We write contractor programs in every state and can coordinate multi-state crews.",
+    description: "Licensed nationwide. We write contractor programs in every state and can coordinate multi-state crews.",
     icon: Truck,
   },
   {
     title: "Same-day certificates",
-    body: "Once bound, we issue AI endorsements, waivers, and certs fast — sometimes within minutes.",
+    description: "Once bound, we issue AI endorsements, waivers, and certs fast — sometimes within minutes.",
     icon: FileSignature,
   },
 ];
