@@ -1,189 +1,231 @@
-// Centralized site data — used across nav, footer, schema, CTAs
-// Framing Contractor Insurance — wood framing / rough carpentry contractors
-
 export const SITE = {
-  name: "Framing Contractor Insurance",
-  legalName: "Framing Contractor Insurance (by Contractors Choice Agency)",
-  domain: "framingcontractorinsurance.com",
-  url: "https://framingcontractorinsurance.com",
-  tagline: "Insurance for Wood Framing & Rough Carpentry Contractors",
+  name: "Contractor Insurance Info",
+  legalName: "Contractors Choice Agency",
+  domain: "contractorinsuranceinfo.com",
+  url: "https://contractorinsuranceinfo.com",
+  tagline: "The Definitive Resource for Contractor Insurance",
   description:
-    "Specialized commercial insurance for framing contractors and rough carpentry crews — general liability, workers' comp (class 5403), builder's risk, tools & equipment floaters, commercial auto, and commercial property. Fall, nail-gun, and saw exposures underwritten right. Licensed all 50 states.",
+    "Contractor Insurance Info — the definitive contractor insurance resource. GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and E&O explained. All 50 states. Get a quote in 15 minutes.",
   phone: "844-967-5247",
-  phoneAlt: "855-336-7189",
   phoneHref: "tel:+18449675247",
-  phoneAltHref: "tel:+18553367189",
   email: "josh@contractorschoiceagency.com",
   founded: 2005,
   npn: "8608479",
   address: {
-    street: "12220 E Riggs Road, Suite #105",
+    street: "12220 E Riggs Road Suite #105",
     city: "Chandler",
     state: "AZ",
     zip: "85249",
     country: "US",
   },
-  hours: "Mon–Fri 8am–5pm (MST)",
-  claimsSla: "2-hour claims response",
-  quoteSla: "15-minute quote turnaround",
-  statesLicensed: "All 50 states",
+  hours: "Mon–Fri 8 am–5 pm MST",
+  claimsSla: "Same-day claims reporting assistance",
+  quoteSla: "Quotes in approximately 15 minutes",
+  statesLicensed: 50,
+} as const;
+
+export const BRAND = {
+  brandShort: "Contractor Insurance Info",
+  brandSub: "Contractors Choice Agency",
+  nicheShort: "contractor",
+  nicheCap: "Contractor",
+  nichePlural: "contractors",
+  nichePluralCap: "Contractors",
+  operator: "contractor",
+  operatorCap: "Contractor",
+  industry: "contracting",
+  industryCap: "Contracting",
+  audience: "contractors",
+  audienceCap: "Contractors",
+  ownerTitle: "Licensed Insurance Agent",
+  regionPill: "All 50 States",
+  serviceSuffix: "for Contractors",
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Coverage", href: "/coverage" },
+  { label: "Coverage Types", href: "/services" },
+  { label: "Coverage Area", href: "/coverage" },
+  { label: "Resources", href: "/blog" },
   { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
 export const SERVICES = [
   {
     slug: "general-liability",
-    title: "General Liability Insurance",
-    short: "For framing & rough carpentry operations",
+    title: "General Liability",
+    short: "GL & Completed Ops",
     description:
-      "Third-party bodily injury and property damage protection for your framing crews, jobsites, and subcontracted work — including products-completed operations and the GC certificates that get you onto the project.",
+      "Third-party bodily injury, property damage, and completed-operations protection — the foundational policy every contractor must carry and understand.",
     icon: "ShieldCheck",
-    keywords: ["framing contractor general liability", "rough carpentry insurance", "framing subcontractor GL", "CG 00 01 framing", "framer liability insurance"],
+    keywords: [
+      "general liability insurance contractor",
+      "contractor GL coverage explained",
+      "completed operations insurance",
+      "contractor liability guide",
+    ],
+  },
+  {
+    slug: "professional-liability",
+    title: "Professional Liability",
+    short: "E&O / Prof. Liability",
+    description:
+      "Errors and omissions coverage for design-build, consulting, and professional services — what GL doesn't cover and why you may need it.",
+    icon: "FileCheck",
+    keywords: [
+      "professional liability insurance contractor",
+      "contractor E&O insurance explained",
+      "errors omissions construction guide",
+      "design build liability",
+    ],
   },
   {
     slug: "workers-compensation",
     title: "Workers' Compensation",
-    short: "Class 5403 carpentry — fall & saw exposures",
+    short: "Workers' Comp",
     description:
-      "Coverage for the injury patterns unique to framing crews — falls from height, nail-gun and saw lacerations, struck-by and material-handling injuries — with correct class 5403 coding so you're not overpaying or underinsured.",
+      "Wage replacement and medical benefits for injured crew members — class codes, experience mods, and what contractors need to know.",
     icon: "HardHat",
-    keywords: ["framing contractor workers comp", "class 5403 workers compensation", "carpentry workers comp", "framer fall injury insurance", "nail gun injury workers comp"],
+    keywords: [
+      "workers comp contractor guide",
+      "construction workers compensation explained",
+      "contractor workers comp class codes",
+      "experience modification factor",
+    ],
   },
   {
     slug: "commercial-auto",
-    title: "Commercial Auto Insurance",
-    short: "Trucks, trailers & lumber delivery",
+    title: "Commercial Auto",
+    short: "Commercial Auto",
     description:
-      "Coverage for the pickup trucks, dump trailers, and lumber haulers that move your crew and materials between jobsites — including hired/non-owned and loading liability.",
+      "Coverage for contractor vehicles, trucks, trailers, and hired/non-owned auto — when personal auto policies fall short.",
     icon: "Truck",
-    keywords: ["framing contractor commercial auto", "contractor truck insurance", "lumber delivery insurance", "trailer insurance carpenter", "hired non owned auto contractor"],
+    keywords: [
+      "commercial auto insurance contractor guide",
+      "contractor truck insurance explained",
+      "hired non-owned auto contractor",
+      "fleet insurance contractor",
+    ],
   },
   {
-    slug: "builders-risk",
-    title: "Builder's Risk Insurance",
-    short: "The structure & materials you're framing",
+    slug: "commercial-umbrella",
+    title: "Commercial Umbrella",
+    short: "Umbrella",
     description:
-      "Course-of-construction coverage for the building you're framing — lumber packages, installed materials, and labor — against fire, wind, theft, and vandalism while the project is open to loss.",
-    icon: "Building2",
-    keywords: ["builders risk framing contractor", "course of construction insurance", "framing phase insurance", "lumber theft insurance jobsite", "soft cost builders risk"],
-  },
-  {
-    slug: "inland-marine-equipment",
-    title: "Tools & Equipment / Inland Marine",
-    short: "Nail guns, saws, compressors & trailers",
-    description:
-      "Scheduled tools-and-equipment coverage for the pneumatic nailers, miter saws, generators, and compressors that walk off jobsites — plus installation floaters that cover materials in transit to the frame.",
-    icon: "Wrench",
-    keywords: ["framing tools insurance", "contractor tools and equipment floater", "inland marine carpenter", "stolen tools insurance", "installation floater framing"],
-  },
-  {
-    slug: "property",
-    title: "Commercial Property Insurance",
-    short: "Shop, yard, office & inventory",
-    description:
-      "All-risk property coverage for the framer's shop, storage yard, prefab wall-panel facility, and lumber/inventory — built for the combustible loading and hot-work exposures of a wood operation.",
-    icon: "Factory",
-    keywords: ["framer commercial property insurance", "carpenter shop insurance", "wall panel plant insurance", "lumber yard property insurance", "contractor property coverage"],
-  },
-  {
-    slug: "umbrella-excess-liability",
-    title: "Umbrella / Excess Liability",
-    short: "Limits to $10M+",
-    description:
-      "Layered limits above your GL, auto, and employers' liability — essential when a fall, a framed-structure fire, or a multi-party jobsite loss could otherwise exhaust your primary coverage.",
+      "Excess liability limits above GL, auto, and employers liability — how umbrella works and when subcontracts require it.",
     icon: "Umbrella",
-    keywords: ["framing contractor umbrella insurance", "excess liability carpenter", "contractor umbrella policy", "high limit liability framing", "jobsite liability umbrella"],
+    keywords: [
+      "commercial umbrella contractor explained",
+      "excess liability contractor guide",
+      "umbrella policy construction",
+      "contractor umbrella insurance",
+    ],
   },
   {
-    slug: "contractors-bonds",
-    title: "Contractor's License & Surety Bonds",
-    short: "License, permit & performance bonds",
+    slug: "surety-bonds",
+    title: "Surety Bonds",
+    short: "Bonds",
     description:
-      "The bonds that keep you legal and competitive — state contractor license bonds, permit bonds, and bid/performance bonds for the GCs and developers who require them before you set the first plate.",
-    icon: "FileCheck",
-    keywords: ["framing contractor license bond", "contractor surety bond", "performance bond carpenter", "permit bond framing", "bid bond contractor"],
+      "License bonds, performance bonds, and payment bonds — what they are, when they're required, and how they differ from insurance.",
+    icon: "Award",
+    keywords: [
+      "contractor surety bond explained",
+      "contractor license bond guide",
+      "performance bond information",
+      "payment bond contractor",
+    ],
+  },
+  {
+    slug: "tools-equipment",
+    title: "Tools & Equipment",
+    short: "Tools & Equipment",
+    description:
+      "Inland marine coverage for contractor tools — what commercial property misses and how tools coverage actually works.",
+    icon: "Wrench",
+    keywords: [
+      "tools and equipment insurance guide",
+      "contractor tools coverage explained",
+      "inland marine contractor information",
+      "jobsite tool theft insurance",
+    ],
   },
 ] as const;
 
+export type ServiceSlug = (typeof SERVICES)[number]["slug"];
+
 export const LOCATIONS = [
   {
-    slug: "texas-southwest",
-    name: "Texas & the Southwest",
-    region: "TX · NM · AZ",
+    slug: "texas",
+    name: "Texas",
+    region: "South Central",
     blurb:
-      "The busiest framing market in the country. We insure Texas and Southwest framing crews running high-volume residential production, master-planned communities, and fast turnaround on slab-on-grade builds.",
+      "Texas contractors navigate a massive construction market across Dallas-Fort Worth, Houston, Austin, and San Antonio. We provide contractor insurance information and quotes specific to Texas requirements across every trade.",
+  },
+  {
+    slug: "california",
+    name: "California",
+    region: "Pacific Coast",
+    blurb:
+      "California has strict contractor licensing and insurance requirements. We provide comprehensive contractor insurance information and placement for CA contractors across the Bay Area, Los Angeles, and San Diego.",
+  },
+  {
+    slug: "florida",
+    name: "Florida",
+    region: "Southeast",
+    blurb:
+      "Florida's active construction and storm-restoration market demands comprehensive contractor insurance programs. We serve Florida contractors statewide with information and coverage across all trades.",
   },
   {
     slug: "southeast",
-    name: "U.S. Southeast",
-    region: "Florida · Georgia · Carolinas",
+    name: "Southeast",
+    region: "Multi-State",
     blurb:
-      "Hurricane-zone framing underwriting for Southeast crews — wind and named-storm exposure, Florida building code compliance, and high-volume coastal and inland residential production.",
+      "The Southeast construction boom drives demand for specialty contractor insurance. We provide information and coverage for contractors across GA, NC, SC, TN, AL, and MS.",
   },
   {
-    slug: "rocky-mountain",
-    name: "Rocky Mountain West",
-    region: "Colorado · Idaho · Utah",
+    slug: "midwest",
+    name: "Midwest",
+    region: "Multi-State",
     blurb:
-      "Front-Range and Intermountain West framing operations. Programs sized for crews serving the region's booming residential and multifamily construction with snow and elevation exposures.",
-  },
-  {
-    slug: "pacific-northwest",
-    name: "Pacific Northwest",
-    region: "Oregon · Washington",
-    blurb:
-      "PNW framing contractors running wet-climate, seismic-zone builds. Coverage that accounts for tight energy-code framing, engineered lumber, and year-round wet jobsite conditions.",
-  },
-  {
-    slug: "desert-west",
-    name: "Desert West",
-    region: "Arizona · Nevada",
-    blurb:
-      "Phoenix, Las Vegas, and Tucson framing operations. Programs for high-volume desert residential production, slab construction, and rapid crew mobilization across master-planned developments.",
-  },
-  {
-    slug: "great-lakes",
-    name: "Great Lakes & Midwest",
-    region: "Michigan · Ohio · Illinois · Indiana",
-    blurb:
-      "Midwest framing contractors serving suburban and rural residential markets. Coverage for seasonal build cycles, freeze/thaw framing conditions, and crew variability.",
+      "Midwest contractors face diverse project types from commercial to residential. We write contractor insurance programs across OH, IL, MI, IN, WI, MN, MO, and KS.",
   },
   {
     slug: "northeast",
-    name: "Northeast & Mid-Atlantic",
-    region: "NY · NJ · PA · New England",
+    name: "Northeast",
+    region: "Multi-State",
     blurb:
-      "Northeast framers running dense residential, remodel, and addition work. Coverage that meets the region's strict licensing, winter build limitations, and historic-district requirements.",
+      "Northeast contractors work in some of the most demanding regulatory environments in the country. We provide contractor insurance information and placement in NY, NJ, CT, MA, PA, and RI.",
   },
   {
-    slug: "california-west",
-    name: "California & West Coast",
-    region: "California",
+    slug: "mountain-west",
+    name: "Mountain West",
+    region: "Multi-State",
     blurb:
-      "Seismic-zone and wildfire-exposure underwriting for California framing contractors. Programs built for Title 24 framing, WUI builds, and the state's demanding CSLB licensing environment.",
+      "Mountain West construction markets in CO, AZ, NV, UT, and NM are growing rapidly. We write contractor insurance programs across the entire region.",
+  },
+  {
+    slug: "pacific-west",
+    name: "Pacific West",
+    region: "Multi-State",
+    blurb:
+      "Pacific West contractors in WA and OR work across residential, commercial, and infrastructure sectors. We provide complete contractor insurance information and placement from Seattle to Portland.",
   },
 ] as const;
+
+export type LocationSlug = (typeof LOCATIONS)[number]["slug"];
 
 export const CREDENTIALS = [
   { label: "Licensed in all 50 states", icon: "MapPin" },
   { label: "Founded 2005 — 20+ years", icon: "CalendarCheck" },
-  { label: "Former framer on staff", icon: "HardHat" },
+  { label: "Contractor specialist agents", icon: "HardHat" },
   { label: "15-minute quote turnaround", icon: "Timer" },
-  { label: "2-hour claims response", icon: "Zap" },
+  { label: "Same-day claims response", icon: "Zap" },
   { label: "A.M. Best A+ carrier partners", icon: "Award" },
 ] as const;
 
 export const STATS = [
-  { value: 600, suffix: "+", label: "Framing crews insured nationwide", prefix: "" },
-  { value: 20, suffix: "+", label: "Years insuring trades contractors", prefix: "" },
+  { value: 500, suffix: "+", label: "Contractors insured nationwide", prefix: "" },
+  { value: 20, suffix: "+", label: "Years placing contractor programs", prefix: "" },
   { value: 15, suffix: " min", label: "Average quote turnaround", prefix: "" },
   { value: 50, suffix: "", label: "States licensed & writing", prefix: "" },
 ] as const;
@@ -191,23 +233,23 @@ export const STATS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Every general contractor we frame for needs a GL certificate with us named additional insured before we can roll. CCA turns those around in minutes and built a program that actually covers our falls and nail-gun claims — not the generic handyman policy our last broker sold us.",
-    name: "Marcus T.",
-    role: "Framing Company Owner",
+      "Finally found an agent who could explain the difference between GL and E&O clearly — and then actually placed both. The resource hub on this site helped me understand what I was buying before I ever called.",
+    name: "Aaron M.",
+    role: "General Contractor",
     location: "Texas",
   },
   {
     quote:
-      "When a lumber package walked off our jobsite overnight, the tools-and-equipment floater CCA set up paid out fast and we kept the schedule. They get that a framing crew lives and dies by its gear and its materials.",
-    name: "Daniela R.",
-    role: "Operations Manager",
-    location: "Florida",
+      "I didn't understand completed-operations coverage until I read the guides here. Now I know exactly what my policy covers and what it doesn't — and I'm not carrying the gaps my last broker left me with.",
+    name: "Patricia S.",
+    role: "Design-Build Contractor",
+    location: "California",
   },
   {
     quote:
-      "Our workers' comp was coded as generic construction and we were getting killed on premium. CCA re-classed us properly under 5403, documented our fall-protection program, and dropped our rate while increasing coverage. Wish we'd switched years ago.",
-    name: "Tyler J.",
-    role: "Crew Owner",
-    location: "Colorado",
+      "Used the information here to understand umbrella limits before a GC negotiation. Walked into that subcontract knowing exactly what I needed. Saved me from signing a contract I couldn't actually meet.",
+    name: "Derek W.",
+    role: "Electrical Contractor",
+    location: "Florida",
   },
 ] as const;
