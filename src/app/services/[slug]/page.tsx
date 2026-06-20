@@ -9,24 +9,23 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { SERVICES, SITE } from "@/lib/site";
 import { SERVICE_DETAIL, buildPageFaqs } from "@/lib/content";
 import {
-  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck,
-  Umbrella, Factory, CheckCircle2, ArrowRight, ArrowLeft, Users, Target,
+  ShieldCheck, HardHat, Truck, Wrench, FileCheck,
+  Umbrella, Award, CheckCircle2, ArrowRight, ArrowLeft, Users, Target,
 } from "lucide-react";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck, Factory, Umbrella,
+  ShieldCheck, HardHat, Truck, Wrench, FileCheck, Umbrella, Award,
 } as const;
 
-// Per-service hero imagery (falls back to hero.jpg)
+// Per-service hero imagery (falls back to coverage.jpg)
 const SERVICE_IMAGE: Record<string, string> = {
-  "general-liability": "/images/framing-walls.jpg",
-  "workers-compensation": "/images/scaffold-safety.jpg",
-  "commercial-auto": "/images/lumber-package.jpg",
-  "builders-risk": "/images/jobsite.jpg",
-  "inland-marine-equipment": "/images/blueprint-tools.jpg",
-  "property": "/images/commercial-build.jpg",
-  "umbrella-excess-liability": "/images/truss-roof.jpg",
-  "contractors-bonds": "/images/nail-gun-action.jpg",
+  "general-liability": "/images/coverage.jpg",
+  "workers-compensation": "/images/coverage.jpg",
+  "commercial-auto": "/images/coverage.jpg",
+  "professional-liability": "/images/coverage.jpg",
+  "commercial-umbrella": "/images/coverage.jpg",
+  "surety-bonds": "/images/coverage.jpg",
+  "tools-equipment": "/images/coverage.jpg",
 };
 
 export function generateStaticParams() {
@@ -41,17 +40,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   const url = `${SITE.url}/services/${slug}`;
   return {
-    title: `${service.title} for Framing Contractors`,
+    title: `${service.title} for Contractors`,
     description: service.description,
     keywords: service.keywords ? [...service.keywords] : undefined,
     alternates: { canonical: url },
     openGraph: {
-      title: `${service.title} for Framing Contractors | Contractors Choice Agency`,
+      title: `${service.title} for Contractors | Contractors Choice Agency`,
       description: service.description,
       url,
-      images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${service.title} for framing contractors` }],
+      images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${service.title} for contractors` }],
     },
-    twitter: { card: "summary_large_image", title: `${service.title} for Framing Contractors`, description: service.description },
+    twitter: { card: "summary_large_image", title: `${service.title} for Contractors`, description: service.description },
   };
 }
 
@@ -90,7 +89,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "InsuranceService",
-    name: `${service.title} for Framing Contractors`,
+    name: `${service.title} for Contractors`,
     description: service.description,
     url,
     provider: {
@@ -136,7 +135,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <h1 className="mt-4 font-heading font-extrabold text-espresso text-4xl md:text-5xl leading-[1.08] tracking-tight">
                   {service.title}{" "}
                   <span className="bg-gradient-to-r from-clay via-clay-light to-gold-dark bg-clip-text text-transparent">
-                    for framing contractors
+                    for contractors
                   </span>
                 </h1>
                 {detail && (
@@ -157,7 +156,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <div className="rounded-t-[10rem] rounded-b-3xl overflow-hidden border-4 border-white shadow-warm-lg">
                   <img
                     src={heroImg}
-                    alt={`${service.title} — framing contractor operations`}
+                    alt={`${service.title} — contractor insurance`}
                     className="w-full h-[300px] md:h-[360px] object-cover"
                     loading="lazy"
                   />

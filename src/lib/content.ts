@@ -364,3 +364,60 @@ export const YEARS_OPTIONS = [
   "6–10 years",
   "10+ years",
 ];
+
+/* ============================================================
+   FAQ UTILITIES
+   ============================================================ */
+export interface FAQItem {
+  q: string;
+  a: string;
+}
+
+/** Compose a FAQ list for any page: specific FAQs first, then general fill. */
+export function buildPageFaqs(specific: FAQItem[], count = 20): FAQItem[] {
+  const seen = new Set<string>();
+  const out: FAQItem[] = [];
+  for (const f of [...specific, ...GENERAL_FAQS]) {
+    const key = f.q.toLowerCase().slice(0, 60);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(f);
+    if (out.length >= count) break;
+  }
+  return out;
+}
+
+export const LOCATION_FAQ_BASE: FAQItem[] = [
+  {
+    q: "Are you licensed to insure contractors in this region?",
+    a: "Yes. Contractors Choice Agency is licensed in all 50 states, so we can bind and service contractor coverage in this region and coordinate certificates for work that crosses state lines.",
+  },
+  {
+    q: "Do regional requirements affect my contractor insurance?",
+    a: "Yes. State contractor licensing boards set minimum insurance requirements that vary by trade, revenue, and project type. We account for your state's specific requirements when structuring your program.",
+  },
+  {
+    q: "Can you meet local GC and developer insurance requirements here?",
+    a: "Yes. We routinely issue additional-insured endorsements, waivers of subrogation, and primary/non-contributory language that local GCs and developers require before you start work.",
+  },
+  {
+    q: "How do regional weather and environmental risks affect my premium?",
+    a: "Wind, named-storm, hail, wildfire, and freeze exposures vary by region and affect pricing for commercial auto and property coverage. We shop markets that write your region and structure deductibles appropriately.",
+  },
+  {
+    q: "Can you write coverage for contractors who work across multiple states?",
+    a: "Yes. Because we're licensed nationwide, a single program can follow your crews across state lines — GL, workers' comp, commercial auto, and tools coverage coordinated without gaps.",
+  },
+  {
+    q: "Do you provide certificates to local building departments and GCs?",
+    a: "Yes. We supply certificates of insurance, license bonds, and additional-insured endorsements that local building departments, GCs, and developers require — turned around quickly.",
+  },
+  {
+    q: "What contractor trades do you cover in this region?",
+    a: "We cover all contractor trades — general contractors, electrical, plumbing, HVAC, roofing, concrete, masonry, landscaping, specialty trades, and more. If it's a contractor license, we likely have a market for it.",
+  },
+  {
+    q: "How quickly can I get a quote for this region?",
+    a: "Typically 15 minutes for a standard program. Once bound, we issue certificates and endorsements usually within the same day.",
+  },
+];
