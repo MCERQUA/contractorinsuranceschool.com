@@ -1,10 +1,10 @@
 import type { Config } from "tailwindcss";
 
 /* ============================================================
-   CONTRACTOR INSURANCE INFO — "Editorial Information Hub" palette
-   Stitch design system: clean white + electric blue + slate
-   clay = blue-600 (interactive) · sage = slate-900 (dark sections)
-   cream = white · sand = slate-50 · espresso = slate-900
+   CONTRACTOR INSURANCE SCHOOL — "Dark Tech Education" palette
+   Stitch design system: dark slate + emerald + JetBrains Mono labels
+   clay = emerald-500 (interactive) · sage = slate-800 (card surface)
+   cream = slate-900 (page bg) · sand = slate-800 · espresso = white
    ============================================================ */
 
 const config: Config = {
@@ -16,31 +16,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // === Backgrounds ===
-        cream: "#ffffff",             // pure white page background
-        sand: "#f8fafc",              // slate-50 alt section bg
+        // === Backgrounds (dark inverted scheme) ===
+        cream: "#0f172a",             // dark slate-950 — main page background
+        sand: "#1e293b",              // slate-800 — alternate section bg
         white: "#ffffff",
-        // === Primary — Electric Blue (token name: clay) ===
+        // === Primary — Emerald (token name: clay) ===
         clay: {
-          DEFAULT: "#2563eb",         // blue-600 — all CTAs, links, accents
-          dark: "#1d4ed8",            // blue-700
-          light: "#3b82f6",           // blue-500
-          50: "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
-          800: "#1e40af",
-          900: "#1e3a8a",
+          DEFAULT: "#10b981",         // emerald-500 — all CTAs, links, accents
+          dark: "#059669",            // emerald-600
+          light: "#34d399",           // emerald-400
+          50: "#ecfdf5",
+          100: "#d1fae5",
+          200: "#a7f3d0",
+          300: "#6ee7b7",
+          400: "#34d399",
+          500: "#10b981",
+          600: "#059669",
+          700: "#047857",
+          800: "#065f46",
+          900: "#064e3b",
         },
-        // === Secondary — Near-black slate (token name: sage) ===
+        // === Secondary — Slate surface (token name: sage) ===
         sage: {
-          DEFAULT: "#0f172a",         // slate-950 — dark hero/CTA sections
-          dark: "#020617",            // almost black
-          light: "#1e293b",           // slate-800
+          DEFAULT: "#1e293b",         // slate-800 — card/section backgrounds
+          dark: "#0f172a",            // slate-950
+          light: "#334155",           // slate-700
           50: "#f8fafc",
           100: "#f1f5f9",
           200: "#e2e8f0",
@@ -50,54 +50,56 @@ const config: Config = {
           600: "#475569",
           700: "#334155",
         },
-        // === Accent — Blue shades (token name: gold) ===
+        // === Accent — Emerald shades (token name: gold) ===
         gold: {
-          DEFAULT: "#2563eb",
-          dark: "#1d4ed8",
-          light: "#3b82f6",
-          50: "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#3b82f6",
-          600: "#2563eb",
+          DEFAULT: "#10b981",
+          dark: "#059669",
+          light: "#34d399",
+          50: "#ecfdf5",
+          100: "#d1fae5",
+          200: "#a7f3d0",
+          300: "#6ee7b7",
+          400: "#34d399",
+          500: "#10b981",
+          600: "#059669",
         },
-        // === Text ===
-        espresso: "#0f172a",          // slate-950 — headlines, dark text
-        cocoa: "#334155",             // slate-700 — body text
-        mocha: "#64748b",             // slate-500 — muted text
+        // === Text (inverted for dark bg) ===
+        espresso: "#f1f5f9",          // slate-100 — headlines, primary text
+        cocoa: "#cbd5e1",             // slate-300 — body text
+        mocha: "#94a3b8",             // slate-400 — muted text
         // === Borders / dividers ===
-        adobe: "#e2e8f0",             // slate-200 — editorial borders
-        adobeDark: "#cbd5e1",         // slate-300
+        adobe: "#334155",             // slate-700 — card borders
+        adobeDark: "#475569",         // slate-600
       },
       fontFamily: {
         heading: ["var(--font-heading)", "system-ui", "sans-serif"],
         body: ["var(--font-body)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "monospace"],
       },
       borderRadius: {
-        arch: "0.5rem",
-        arch2: "0.75rem",
-        "4xl": "0.5rem",
-        "5xl": "0.75rem",
+        arch: "0.75rem",
+        arch2: "1rem",
+        "4xl": "0.75rem",
+        "5xl": "1rem",
       },
       backgroundImage: {
         "sunrise-bands":
-          "linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #f1f5f9 70%, #ffffff 100%)",
+          "linear-gradient(180deg, #0f172a 0%, #1e293b 40%, #0f172a 100%)",
         "warm-radial":
-          "radial-gradient(circle at 30% 20%, rgba(37,99,235,0.05) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(15,23,42,0.03) 0%, transparent 55%)",
-        "clay-gradient": "linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)",
-        "sage-gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-        "gold-gradient": "linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)",
-        "info-hero": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-        "info-surface": "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)",
+          "radial-gradient(circle at 30% 20%, rgba(16,185,129,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(16,185,129,0.04) 0%, transparent 55%)",
+        "clay-gradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "sage-gradient": "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+        "gold-gradient": "linear-gradient(135deg, #10b981 0%, #34d399 100%)",
+        "school-hero": "linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%)",
+        "school-surface": "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)",
       },
       boxShadow: {
-        warm: "0 4px 20px -8px rgba(37,99,235,0.15), 0 2px 8px -4px rgba(15,23,42,0.08)",
-        "warm-lg": "0 12px 40px -15px rgba(37,99,235,0.20), 0 6px 20px -8px rgba(15,23,42,0.10)",
-        card: "0 1px 4px -1px rgba(15,23,42,0.06), 0 1px 2px -1px rgba(15,23,42,0.04)",
-        "card-hover": "0 8px 24px -8px rgba(37,99,235,0.18), 0 4px 12px -4px rgba(15,23,42,0.08)",
-        arch: "0 0 0 1px rgba(226,232,240,1)",
+        warm: "0 4px 20px -8px rgba(16,185,129,0.20), 0 2px 8px -4px rgba(0,0,0,0.3)",
+        "warm-lg": "0 12px 40px -15px rgba(16,185,129,0.25), 0 6px 20px -8px rgba(0,0,0,0.4)",
+        card: "0 1px 4px -1px rgba(0,0,0,0.3), 0 1px 2px -1px rgba(0,0,0,0.2)",
+        "card-hover": "0 8px 24px -8px rgba(16,185,129,0.30), 0 4px 12px -4px rgba(0,0,0,0.3)",
+        "emerald-glow": "0 0 20px rgba(16,185,129,0.25)",
+        arch: "0 0 0 1px rgba(51,65,85,1)",
       },
       keyframes: {
         "fade-up": {
