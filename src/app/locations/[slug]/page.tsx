@@ -22,16 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!loc) return {};
   const url = `${SITE.url}/locations/${slug}`;
   return {
-    title: `Contractor Insurance Info — ${loc.name}`,
+    title: `Contractor Insurance School — ${loc.name}`,
     description: `${loc.blurb} General liability, workers' comp, commercial auto, and tools & equipment for ${loc.name} contractors. 15-minute quotes.`,
     alternates: { canonical: url },
     openGraph: {
-      title: `Contractor Insurance Info — ${loc.name} | Contractors Choice Agency`,
+      title: `Contractor Insurance School — ${loc.name} | Contractors Choice Agency`,
       description: loc.blurb,
       url,
       images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `Contractors in ${loc.name}` }],
     },
-    twitter: { card: "summary_large_image", title: `Contractor Insurance Info — ${loc.name}`, description: loc.blurb },
+    twitter: { card: "summary_large_image", title: `Contractor Insurance School — ${loc.name}`, description: loc.blurb },
   };
 }
 

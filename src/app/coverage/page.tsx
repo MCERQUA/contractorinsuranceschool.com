@@ -10,7 +10,7 @@ import Link from "next/link";
 import { MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contractor Insurance Coverage — All 50 States | Contractor Insurance Info",
+  title: "Contractor Insurance Coverage — All 50 States | Contractor Insurance School",
   description:
     "Contractors Choice Agency writes contractor insurance programs in all 50 states — Texas and the Sun Belt, Southeast, Rocky Mountain, Pacific Northwest, Great Lakes, Northeast, and everywhere contractors work.",
   alternates: { canonical: `${SITE.url}/coverage` },
