@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { headingFont, bodyFont } from "@/lib/fonts";
+import { headingFont, bodyFont, monoFont } from "@/lib/fonts";
 import { SmoothScroll } from "@/components/animations/SmoothScroll";
 import { SITE } from "@/lib/site";
 import "./globals.css";
@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: [
-    "contractor insurance information",
-    "contractor insurance guide",
+    "contractor insurance school",
+    "contractor insurance course",
+    "learn contractor insurance",
     "general liability insurance contractor",
-    "contractor workers compensation explained",
-    "professional liability contractor",
-    "commercial umbrella contractor",
-    "surety bonds contractor guide",
+    "contractor workers compensation guide",
+    "professional liability contractor school",
+    "commercial umbrella contractor explained",
+    "surety bonds contractor education",
     "tools equipment insurance contractor",
-    "contractor insurance resource hub",
     "contractor insurance all 50 states",
   ],
   authors: [{ name: "Contractors Choice Agency" }],
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} | Contractors Choice Agency`,
     description:
-      "The definitive contractor insurance resource — GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and tools coverage explained and placed. All 50 states. 15-min quotes.",
+      "The school where contractors master GL, workers' comp, professional liability, commercial auto, umbrella, bonds, and tools coverage — then get it placed in 15 minutes. All 50 states.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Contractor Insurance Info — the definitive contractor insurance resource hub",
+        alt: "Contractor Insurance School — learn contractor insurance from specialists",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} | Contractors Choice Agency`,
     description:
-      "The definitive contractor insurance resource. GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and tools explained and placed. All 50 states. 15-minute quotes.",
+      "Contractor Insurance School — learn GL, workers' comp, professional liability, umbrella, bonds, and tools coverage. Get a quote in 15 minutes. All 50 states.",
     images: ["/images/og-image.jpg"],
   },
   robots: {
@@ -99,17 +99,17 @@ export default function RootLayout({
     areaServed: { "@type": "Country", name: "United States" },
     serviceType: [
       "General Liability Insurance for Contractors",
-      "Professional Liability / E&O for Contractors",
       "Workers' Compensation for Contractors",
       "Commercial Auto Insurance for Contractors",
+      "Tools and Equipment Insurance for Contractors",
+      "Professional Liability / E&O for Contractors",
       "Commercial Umbrella Insurance for Contractors",
       "Surety Bonds for Contractors",
-      "Tools and Equipment Insurance for Contractors",
     ],
   };
 
   return (
-    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
+    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
       <head>
         <script
           type="application/ld+json"
