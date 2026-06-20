@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import {
-  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck,
-  Umbrella, Factory, ArrowRight,
+  ShieldCheck, HardHat, Truck, Wrench, FileCheck,
+  Umbrella, Award, ArrowRight,
 } from "lucide-react";
 import { SERVICES } from "@/lib/site";
+import { COPY } from "@/lib/content";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck, Umbrella, Factory,
+  ShieldCheck, HardHat, Truck, Wrench, FileCheck, Umbrella, Award,
 } as const;
 
 export function ServicesGrid() {
@@ -22,12 +23,10 @@ export function ServicesGrid() {
             What we insure
           </span>
           <h2 className="mt-3 h-section">
-            Coverage built specifically for{" "}
-            <span className="text-clay">framing contractors</span>.
+            {COPY.servicesGrid.h2Lead}{" "}
+            <span className="text-clay">{COPY.servicesGrid.h2Highlight}</span>.
           </h2>
-          <p className="mt-4 lead">
-            Standard markets exclude work at height and misclassify carpentry crews. We build programs designed for the way framers actually work.
-          </p>
+          <p className="mt-4 lead">{COPY.servicesGrid.lead}</p>
         </FadeIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

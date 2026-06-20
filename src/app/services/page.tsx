@@ -6,23 +6,22 @@ import { CTABand } from "@/components/sections/CTABand";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { SERVICES, SITE } from "@/lib/site";
 import {
-  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck,
-  Umbrella, Factory, ArrowRight,
+  ShieldCheck, HardHat, Truck, Wrench, FileCheck,
+  Umbrella, Award, ArrowRight,
 } from "lucide-react";
+import { COPY } from "@/lib/content";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Building2, Wrench, FileCheck, Factory, Umbrella,
+  ShieldCheck, HardHat, Truck, Wrench, FileCheck, Umbrella, Award,
 } as const;
 
 export const metadata: Metadata = {
-  title: "Framing Contractor Insurance Coverage & Services",
-  description:
-    "Eight lines of insurance built for framing & rough-carpentry contractors: general liability, workers' comp, commercial auto, builder's risk, tools & equipment, property, umbrella, and bonds. Licensed all 50 states.",
+  title: COPY.servicesPage.metaTitle,
+  description: COPY.servicesPage.metaDescription,
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
-    title: "Framing Contractor Insurance Coverage | Contractors Choice Agency",
-    description:
-      "General liability, workers' comp, builder's risk, tools & equipment, commercial auto, property, umbrella, and bonds — written specifically for framing contractors.",
+    title: COPY.servicesPage.ogTitle,
+    description: COPY.servicesPage.ogDescription,
     url: `${SITE.url}/services`,
   },
 };
@@ -47,18 +46,13 @@ export default function ServicesPage() {
             <FadeIn>
               <span className="pill-clay">Coverage lines</span>
               <h1 className="mt-5 font-heading font-extrabold text-espresso text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-                Insurance built line-by-line for{" "}
+                {COPY.servicesPage.h1Lead}{" "}
                 <span className="bg-gradient-to-r from-clay via-clay-light to-gold-dark bg-clip-text text-transparent">
-                  framing contractors
+                  {COPY.servicesPage.h1Highlight}
                 </span>
                 .
               </h1>
-              <p className="mt-6 lead max-w-2xl mx-auto">
-                Each policy below addresses a specific exposure in framing —
-                from the height exclusions your GL shouldn&rsquo;t have to the
-                stolen nailers and lumber your tools floater and builder&rsquo;s
-                risk need to cover.
-              </p>
+              <p className="mt-6 lead max-w-2xl mx-auto">{COPY.servicesPage.lead}</p>
             </FadeIn>
           </div>
         </section>
@@ -113,10 +107,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <CTABand
-          title="Not sure which lines you need?"
-          description="Most framing contractors bundle GL + workers' comp + builder's risk + a tools floater into one coordinated program. We'll build the right mix in one call."
-        />
+        <CTABand title={COPY.servicesPage.ctaTitle} description={COPY.servicesPage.ctaDescription} />
       </main>
       <Footer />
     </>

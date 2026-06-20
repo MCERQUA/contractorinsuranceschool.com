@@ -1,771 +1,339 @@
-// Rich, niche-accurate content blocks for Framing Contractor Insurance.
-
 import {
   PhoneCall, FileSearch, FileSignature, ShieldCheck,
-  Building2, Truck, HardHat, Wrench,
+  Truck, HardHat, Award, Wrench, Umbrella,
 } from "lucide-react";
 
-export interface FAQItem {
-  q: string;
-  a: string;
-}
+/* ============================================================
+   COPY
+   ============================================================ */
+export const COPY = {
+  hero: {
+    h1Lead: "The definitive resource for",
+    h1Highlight: "contractor insurance",
+    subcopy:
+      "GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and tools coverage — explained clearly, quoted in 15 minutes. Your information hub for every line a contractor needs.",
+    statValue: "500+",
+    statLabel: "Contractors insured — every trade, every state, every coverage type explained",
+    imageAlt: "Contractor reviewing insurance information — contractor insurance resource hub",
+  },
+  nav: { ariaLabel: "Contractor Insurance Info home" },
+  footer: {
+    ctaTitle: "Ready for a real contractor insurance quote?",
+    ctaSubcopy: "15-minute quotes from a specialist who understands the coverage. All 50 states. Every trade.",
+    description:
+      "Contractor Insurance Info — the definitive contractor insurance resource hub. GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and tools coverage explained and placed. A division of Contractors Choice Agency — founded 2005, licensed all 50 states.",
+  },
+  servicesGrid: {
+    h2Lead: "Every coverage type",
+    h2Highlight: "explained and placed",
+    lead: "Not just a guide — a licensed agency that places the coverage we explain. GL, E&O, workers' comp, auto, umbrella, bonds, and tools for every trade in every state.",
+  },
+  why: {
+    eyebrow: "Why contractors use this resource",
+    h2Lead: "Coverage gaps that cost",
+    h2Highlight: "contractors the most",
+    lead: "Most contractors don't understand their coverage until a claim is denied. This resource explains exactly what each policy covers, what it excludes, and how to build a program that actually protects your business.",
+    sidebarTitle: "Information you can act on",
+    sidebarBody:
+      "Every guide on this site is written by Josh Cotner, who founded Contractors Choice Agency in 2005 after working in the trades. We know how contractors work, what claims look like, and where generic policies fail.",
+  },
+  coverage: {
+    eyebrow: "Where we write",
+    h2Lead: "Contractor coverage.",
+    h2Highlight: "All 50 states.",
+    lead: "From Texas and California to the Northeast's dense regulatory markets and the Southeast's booming construction economy, we place contractor insurance programs in every state.",
+    imageAlt: "Contractor with insurance documents — contractor insurance information and coverage nationwide",
+    badgeTitle: "National coverage for every trade.",
+    badgeSub: "Writing contractor programs in all 50 states since 2005.",
+  },
+  process: {
+    lead: "Read the guides. Understand the coverage. Call us when you're ready — and get real quotes from specialty contractor markets in about 15 minutes.",
+  },
+  testimonials: {
+    eyebrow: "From contractors who researched first",
+    h2Lead: "Contractors who understood",
+    h2Highlight: "before they bought",
+  },
+  finalCta: {
+    h2Lead: "Ready to move from",
+    h2Highlight: "information to coverage?",
+    lead: "Understanding your coverage is step one. Step two is placing it with A-rated specialty contractor markets. One call, 15 minutes, real quotes.",
+  },
+  ctaBand: {
+    defaultTitle: "From information to coverage in 15 minutes.",
+    defaultDescription:
+      "Get a real contractor insurance quote from a specialist who understands GL, E&O, workers' comp, umbrella, and bonds — not a generalist broker.",
+  },
+  faq: {
+    defaultTitleLead: "Contractor insurance,",
+    defaultTitleHighlight: "explained clearly",
+  },
+  servicesPage: {
+    metaTitle: "Contractor Insurance Coverage Types — Complete Guide | Contractor Insurance Info",
+    metaDescription:
+      "Complete guide to contractor insurance: GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and tools & equipment. Every coverage type explained.",
+    h1Lead: "Every contractor insurance",
+    h1Highlight: "coverage type explained",
+    lead: "Each coverage type below addresses a specific exposure in contractor work. Read the guide, then get a quote — all from the same source.",
+    ogTitle: "Contractor Insurance Coverage Types | Contractor Insurance Info",
+    ogDescription:
+      "GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and tools coverage — explained and placed for contractors in every trade.",
+    ctaTitle: "Ready to move from information to coverage?",
+    ctaDescription:
+      "We explain the coverage and place it. One call, 15 minutes, real quotes from specialty contractor markets.",
+  },
+  blogPage: {
+    metaTitle: "Contractor Insurance Guides & Resources | Contractor Insurance Info",
+    metaDescription:
+      "In-depth contractor insurance guides: GL and completed ops, workers' comp class codes, professional liability, tools coverage, umbrella limits, bonds, and commercial auto.",
+    h1Lead: "Contractor insurance",
+    h1Highlight: "guides and resources",
+    lead: "In-depth guides on every contractor insurance coverage type — written by specialists who place the coverage, not just write about it.",
+    ogTitle: "Contractor Insurance Guides | Contractor Insurance Info",
+    ogDescription:
+      "In-depth contractor insurance guides: GL, completed ops, workers' comp, professional liability, tools, umbrella, and bonds.",
+  },
+  serviceDetail: {
+    h1Suffix: "— contractor insurance guide",
+    imageAltSuffix: "contractor work",
+    category: "Contractor Insurance Guide",
+  },
+  about: {
+    metaTitle: "About Contractor Insurance Info | Contractors Choice Agency",
+    metaDescription:
+      "Contractor Insurance Info is the resource hub of Contractors Choice Agency, founded in 2005. GL, workers' comp, commercial auto, tools, professional liability, umbrella, and bonds explained and placed. Licensed all 50 states.",
+    h1Lead: "The information hub",
+    h1Highlight: "built by contractors, for contractors",
+    lead: "Contractor Insurance Info is the educational resource and placement arm of Contractors Choice Agency — founded in 2005 by Josh Cotner, who came from the trades and knows exactly what happens when a contractor doesn't understand their coverage at claim time.",
+    imageAlt: "Contractor Insurance Info — contractor insurance resource and placement",
+    storyEyebrow: "Our story",
+    storyTitle: "From the jobsite to the agency.",
+    storyLead:
+      "Josh Cotner worked in the trades, filed certificates, and saw firsthand what happened when coverage failed. He founded CCA in 2005 — and built this resource so contractors could understand what they were buying before they needed it.",
+    valuesTitle: "What we believe about contractor insurance.",
+    timeline: [
+      { year: "2005", title: "Contractors Choice Agency founded", desc: "Josh Cotner opens CCA in Chandler, AZ, with one goal: contractor insurance done right. Built on firsthand trade experience, not generic business-owner coverage." },
+      { year: "15 yrs", title: "Expanded to specialty contractor markets", desc: "After placing programs across dozens of contractor categories and trades, CCA develops deep expertise in the nuanced exposures that separate contractor risk from general commercial risk." },
+      { year: "Today", title: "Contractor Insurance Info launched", desc: "Contractor Insurance Info brings CCA's expertise to contractors who want to understand their coverage before they buy — every type explained, every trade served, all 50 states." },
+    ],
+    values: [
+      { icon: "HardHat", title: "Information first", desc: "Understanding what you're buying is the foundation of good coverage. We explain every line before asking you to bind it." },
+      { icon: "ShieldCheck", title: "Coverage that closes the gaps", desc: "Completed-operations tail, professional liability gaps, tools theft on jobsites — we address the risks standard markets leave open." },
+      { icon: "Award", title: "A-rated markets only", desc: "We shop carriers with the financial strength and contractor experience to pay claims — not just to write the policy." },
+      { icon: "Handshake", title: "Honest, direct advice", desc: "If you don't need a line of coverage, we'll tell you. We earn trust by being straight about what your business actually requires." },
+    ],
+  },
+  quote: {
+    h1Lead: "Get your",
+    h1Highlight: "contractor insurance quote",
+    lead: "You've read the guides. Now get the coverage. We'll shop A-rated specialty contractor markets and come back with real quotes in about 15 minutes.",
+    businessPlaceholder: "Apex Contracting LLC",
+    emailPlaceholder: "contact@apexcontracting.com",
+    phonePlaceholder: "(480) 555-0100",
+    messagePlaceholder:
+      "Trade type, annual revenue, payroll, crew size, coverage lines needed, current insurer, loss history, or anything else that helps us quote accurately…",
+    errorMessage: "Something went wrong. Please call us at 844-967-5247 or try again.",
+    trustNicheTitle: "Information-backed coverage",
+    trustNicheDesc: "We explain what you're buying before you bind it. No surprises at claim time.",
+  },
+  contact: {
+    h1Lead: "Questions about contractor",
+    h1Highlight: "insurance coverage?",
+    lead: "Ask a specialist who understands contractor risk — and can place the coverage once you're ready.",
+    errorMessage: "Something went wrong. Please call us at 844-967-5247.",
+  },
+  coveragePage: {
+    metaTitle: "Contractor Insurance — National Coverage, All 50 States | Contractor Insurance Info",
+    metaDescription:
+      "Contractors Choice Agency writes contractor insurance in all 50 states — Texas, California, Florida, the Northeast, Southeast, Midwest, Mountain West, and everywhere contractors work.",
+    h1Lead: "National reach.",
+    h1Highlight: "All 50 states, every trade.",
+    lead: "Contractors Choice Agency places contractor insurance programs in all 50 states — from Texas and California to the Northeast's dense regulatory markets and the Southeast's booming construction economy.",
+    sectionTitle: "Contractor markets we serve.",
+    nationwideLead:
+      "Whether your contracting business is in Texas, California, Florida, the Northeast, or anywhere in between — one agent, one coordinated program. NPN #8608479.",
+    faqs: [
+      { q: "Do you only write contractor insurance in certain states?", a: "No. Contractors Choice Agency is licensed in all 50 states and writes contractor programs for every trade anywhere in the country — Texas, California, Florida, the Northeast, Southeast, Midwest, Mountain West, and everywhere in between." },
+      { q: "Can you write coverage if I work across state lines?", a: "Yes. We structure programs so your GL, workers' comp, commercial auto, and professional liability coordinate across state lines without gaps — including contractors who travel to projects in multiple states." },
+      { q: "Do you understand the specific requirements of my state?", a: "Yes. We work with specialty contractor markets that understand regional differences — California's strict licensing and GL requirements, Northeast's dense regulatory environment, and the Southeast and Mountain West's growing construction markets." },
+      { q: "Can you coordinate coverage across multiple project locations?", a: "Yes. If you run multiple projects simultaneously in different locations, we build one coordinated program so there are no gaps in GL, workers' comp, or auto coverage across jobsites." },
+    ],
+  },
+} as const;
 
 /* ============================================================
-   PROCESS — how getting insured with us works
+   PROCESS
    ============================================================ */
 export const PROCESS = [
-  {
-    step: "01",
-    icon: PhoneCall,
-    title: "Tell us about your framing operation",
-    description:
-      "15-min call or form. Crew size, annual framing revenue, typical project size, subs vs. W-2, and the lines your old carrier excluded.",
-  },
-  {
-    step: "02",
-    icon: FileSearch,
-    title: "We shop specialty trades markets",
-    description:
-      "Markets that actually write framing contractors at class 5403 — not generic handyman carriers that exclude falls over 6 feet or subcontracted work.",
-  },
-  {
-    step: "03",
-    icon: FileSignature,
-    title: "Bind a program built for framers",
-    description:
-      "GL + workers' comp + builder's risk + tools floater + auto, coordinated so there are no gaps between your operations and the structure you're framing.",
-  },
-  {
-    step: "04",
-    icon: ShieldCheck,
-    title: "Certificates & claims that move fast",
-    description:
-      "When a GC needs an additional-insured certificate before you roll, or a fall claim happens, you reach a person with context — not a queue. 2-hour response.",
-  },
+  { step: "01", icon: PhoneCall, title: "Read the guides, then call us", description: "Use the resources on this site to understand what you need. Then call or submit — we take it from there." },
+  { step: "02", icon: FileSearch, title: "We shop specialty contractor markets", description: "Niche markets that actually write completed-operations, professional liability, and tools coverage for contractors — not generic commercial carriers that carve them out." },
+  { step: "03", icon: FileSignature, title: "Bind a program you actually understand", description: "GL + workers' comp + commercial auto + tools + professional liability + umbrella + bonds, coordinated with no gaps across your projects and crew." },
+  { step: "04", icon: ShieldCheck, title: "Claims support from people who know your coverage", description: "When a claim arrives, you reach a contractor specialist who can explain your coverage in plain English — not a queue that has to look up your policy." },
 ] as const;
 
 /* ============================================================
    WHY CHOOSE US
    ============================================================ */
 export const WHY_CHOOSE = [
-  {
-    icon: ShieldCheck,
-    title: "GL that covers falls over 6 feet",
-    description:
-      "Many cheap contractor policies exclude work over one or two stories. We place general liability that covers the real framing exposure — two- and three-story framing, roof work, and subcontracted operations.",
-  },
-  {
-    icon: HardHat,
-    title: "Workers' comp coded right at 5403",
-    description:
-      "Framing crews get mis-classed constantly. We assign the correct carpentry class codes and document your fall-protection program so your rate reflects your real — not worst-case — exposure.",
-  },
-  {
-    icon: Building2,
-    title: "Builder's risk for the structure you frame",
-    description:
-      "The lumber package, installed materials, and labor you've put into a frame are a real loss exposure. We write builder's risk that covers fire, theft, wind, and vandalism during construction.",
-  },
-  {
-    icon: Wrench,
-    title: "Tools & equipment floaters that pay",
-    description:
-      "Nail guns, miter saws, generators, and compressors walk off jobsites every day. We schedule your gear at replacement cost so a theft doesn't come out of your pocket.",
-  },
-  {
-    icon: Truck,
-    title: "Certificates & additional insureds, fast",
-    description:
-      "GCs and developers require certificates before you set the first plate. We turn additional-insured and waiver-of-subrogation endorsements around in minutes, not days.",
-  },
-  {
-    icon: HardHat,
-    title: "Run by a former contractor",
-    description:
-      "Josh Cotner knows how framing operations run and exactly what happens when coverage fails at claim time. You'll never have to explain a jobsite to us.",
-  },
+  { icon: ShieldCheck, title: "GL explained before you bind it", description: "Most contractors don't understand their GL form until a claim is denied. We explain occurrence vs. claims-made, completed-ops aggregate, and subcontractor exclusions before you sign anything." },
+  { icon: Award, title: "Professional liability for design-build and consulting", description: "Standard GL doesn't cover errors in plans, specs, or design-build services. We explain when you need E&O and place it with markets that actually write it for contractors." },
+  { icon: Wrench, title: "Tools coverage that follows your crew", description: "Standard commercial property doesn't cover tools at jobsites. We explain inland marine tools coverage and place it so your crew's tools are protected wherever they work." },
+  { icon: HardHat, title: "Workers' comp class codes explained", description: "Wrong class codes mean audit surprises and coverage gaps. We explain how class codes work for your specific trade and assign them correctly from the start." },
+  { icon: Umbrella, title: "Umbrella limits that meet GC requirements", description: "GC subcontracts require $2M–$5M total limits. We explain how umbrella stacks above GL and auto, and place the limits that satisfy your contracts." },
+  { icon: Truck, title: "Run by people who came from the trades", description: "Josh Cotner worked in the trades before founding CCA in 2005. The information on this site comes from someone who understands what contractor claims actually look like." },
 ] as const;
 
 /* ============================================================
    HOMEPAGE FAQ — 20 questions
    ============================================================ */
-export const HOME_FAQS: FAQItem[] = [
-  {
-    q: "What kind of insurance does a framing contractor need?",
-    a: "A framing contractor typically needs a bundle built around the job: general liability, workers' compensation (class 5403 carpentry), builder's risk for the structure being framed, a tools & equipment floater for nail guns and saws, commercial auto for trucks and trailers, and an umbrella for higher-limit GC requirements. Most framers also need contractor license and surety bonds to stay legal and competitive.",
-  },
-  {
-    q: "How much does framing contractor insurance cost?",
-    a: "Most framing contractors pay between $1,500 and $4,500 a year for a $1M/$2M general liability policy, depending on payroll, revenue, crew size, claims history, and whether you frame over two stories. Workers' comp is rated on payroll at the 5403 carpentry class. We quote the whole program in about 15 minutes and show you every market's price side by side.",
-  },
-  {
-    q: "What is the workers' comp class code for framing?",
-    a: "Wood framing and rough carpentry is most often coded under NCCI class 5403 (Carpentry). Some operations split out roof truss setting, siding, or interior finish carpentry into their own codes. Correct classification matters — wrong codes mean overpaying on premium or, worse, an audit bill and denied claim.",
-  },
-  {
-    q: "Does general liability cover falls from height?",
-    a: "It should — but many budget contractor policies exclude work over one or two stories or exclude roof work entirely. Framing is a height business, so we place GL that specifically covers two- and three-story framing, truss setting, and roof work without height exclusions.",
-  },
-  {
-    q: "Do I need builder's risk if the GC already carries it?",
-    a: "Sometimes the project's master builder's risk covers your installed work, but gaps are common — especially around materials you've delivered but not yet installed, or theft from an unsecured jobsite. We review the GC's program and either confirm you're covered or write a framers-installation floater so your materials and labor are protected.",
-  },
-  {
-    q: "Does my policy cover my nail guns, saws, and compressors?",
-    a: "General liability and property do not cover your tools off-premises. Tools are an inland marine (tools & equipment) coverage. We schedule your gear — nail guns, miter saws, generators, air compressors, lasers — at replacement cost so theft from the jobsite or truck is covered.",
-  },
-  {
-    q: "Are my subcontractors covered under my insurance?",
-    a: "Your GL does not extend to independent subcontractors — they should carry their own coverage and name you additional insured. If your subs are uninsured and cause a loss, you can be pulled in. We help you set up certificate tracking and additional-insured requirements so subcontracted work doesn't become your liability.",
-  },
-  {
-    q: "Can you get me a certificate of insurance today?",
-    a: "Yes. Once your program is bound we turn around additional-insured certificates, waivers of subrogation, and primary/non-contributory endorsements — usually within minutes. We know GCs won't let you start framing without proof of coverage.",
-  },
-  {
-    q: "What happens if lumber is stolen from my jobsite?",
-    a: "Lumber packages and installed materials are covered under builder's risk or an installation floater, while your tools are covered under a tools & equipment policy. We help you structure both so jobsite theft — one of the most common framing losses — doesn't come out of your margin.",
-  },
-  {
-    q: "Do you insure framing contractors in all 50 states?",
-    a: "Yes. Contractors Choice Agency is licensed in all 50 states and writes framing contractors from Texas and the Sun Belt to the Pacific Northwest, Rocky Mountain West, and Northeast.",
-  },
-  {
-    q: "How fast can I get a quote?",
-    a: "Typically 15 minutes on a call for a standard framing program. Complex operations — wall-panel plants, large multifamily, heavy subcontracted work — may take a day or two to place with the right markets, but we move fast and tell you the timeline up front.",
-  },
-  {
-    q: "Will my rate go up if a framer gets hurt on the job?",
-    a: "A single workers' comp claim can affect your experience modifier and future premium. The best protection is correct class coding, a documented safety and fall-protection program, and a claims partner who manages the claim aggressively — all of which we help with. Good loss control keeps your experience mod down.",
-  },
-  {
-    q: "What limits do framing contractors typically carry?",
-    a: "Most residential framers carry $1M per occurrence / $2M general aggregate for GL, plus an umbrella of $2M–$5M. Commercial and multifamily GCs often require $2M or $5M limits and additional insured status. We size limits to what your contracts actually demand.",
-  },
-  {
-    q: "Do I need commercial auto for my work truck?",
-    a: "Yes. A personal auto policy typically excludes business use and will deny a claim when you're hauling lumber or tools to a jobsite. Commercial auto covers your trucks, dump trailers, and lumber haulers, including hired/non-owned vehicles when employees drive their own trucks for you.",
-  },
-  {
-    q: "What if I frame in wildfire or hurricane zones?",
-    a: "Building in the WUI or on the coast adds underwriting complexity — wind, named-storm, and wildfire exposures affect builder's risk and property pricing. We have markets that write these zones and structure your program so you're covered during the build, not just after.",
-  },
-  {
-    q: "Can you insure framers with prior claims or cancellations?",
-    a: "Often, yes. If you've had a fall claim, a cancellation, or been declined, we have excess-and-surplus (E&S) markets for contractors other brokers won't touch. Bring your loss runs and we'll find a path.",
-  },
-  {
-    q: "Do you cover wall-panel and truss manufacturing too?",
-    a: "Yes. If you've added off-site wall-panel or floor-truss fabrication, that's a different exposure (manufacturing property and products liability). We can extend your program to cover a panel plant or coordinate a separate manufacturing policy.",
-  },
-  {
-    q: "What is additional insured status and why do GCs want it?",
-    a: "Additional insured status extends your liability coverage to the GC or developer for your operations. GCs require it — along with a waiver of subrogation and primary/non-contributory endorsement — so that if a claim arises from your framing work, your policy responds first. We issue these endorsements routinely.",
-  },
-  {
-    q: "How are framing insurance premiums calculated?",
-    a: "General liability is usually rated on payroll or subcontractor cost; workers' comp on payroll by class code; tools & equipment on scheduled value; commercial auto on vehicles and drivers; builder's risk on the project value. We document your operation accurately so you're rated on real exposure, not a worst-case guess.",
-  },
-  {
-    q: "Why use a specialty framing insurance broker?",
-    a: "Framing is a height- and tool-heavy trade with fall, nail-gun, saw, and theft exposures that generic small-business carriers routinely exclude or misprice. A specialty broker knows the class codes, the height exclusions to avoid, the markets that write framers, and how to manage a framing claim — which means better coverage at a fairer price.",
-  },
+export const HOME_FAQS = [
+  { q: "What insurance does a contractor need?", a: "Most contractors need: general liability (with completed operations), workers' compensation if you have employees, commercial auto for work vehicles, tools and equipment (inland marine) coverage, and commercial umbrella for higher limits. Design-build and consulting contractors also need professional liability (E&O). Contractors required to be licensed or bonded also need surety bonds." },
+  { q: "How much does contractor insurance cost?", a: "Cost depends on trade type, annual revenue, payroll, crew size, project types, and loss history. A solo contractor may pay a few thousand per year for basic GL and auto; larger firms with multiple crews and specialty coverage pay more. We quote your actual business in about 15 minutes — never a generic estimate." },
+  { q: "What is completed-operations coverage and why do contractors need it?", a: "Completed-operations coverage protects you from liability claims that arise after a project is finished. Defects discovered months or years after punch-out — structural failures, water intrusion, electrical issues — are completed-operations claims. Every contractor who finishes physical work needs this coverage properly structured in their GL policy." },
+  { q: "What's the difference between general liability and professional liability?", a: "GL covers bodily injury and property damage from your physical work. Professional liability (E&O) covers claims arising from professional decisions — errors in designs, specifications, project management, or consulting advice. Contractors who do more than physical work may need both." },
+  { q: "What class codes apply to my trade for workers' comp?", a: "Workers' comp rates are set by class code — each trade has specific codes. Carpentry is 5645, painting is 5474, plumbing is 5183, electrical is 5190, HVAC/mechanical is 5183 or 5537, masonry is 5022, and office staff is 8742. Correct classification prevents audit surprises and ensures claims are covered at the right rate." },
+  { q: "Why doesn't commercial property cover my tools at jobsites?", a: "Standard commercial property covers business property at a fixed location. Tools that travel to jobsites are only covered up to a small off-premises sublimit — typically 10% — and often not at all during active use. Inland marine tools coverage is what follows your tools wherever they go." },
+  { q: "How does a commercial umbrella work for contractors?", a: "A commercial umbrella sits above your GL, commercial auto, and employers liability limits. When those underlying limits are exhausted, the umbrella responds. For contractors with subcontract requirements for $2M–$5M total liability limits, umbrella is the most cost-effective way to meet those requirements." },
+  { q: "What are surety bonds and how are they different from insurance?", a: "Surety bonds are financial guarantees — the bonding company guarantees you'll perform your obligations. Insurance pays the insured for covered losses; bonds pay the project owner or beneficiary if you fail to perform. License bonds, performance bonds, and payment bonds are required for contractors in most states and for most public projects." },
+  { q: "When does a contractor need commercial auto instead of personal auto?", a: "If vehicles are used for business purposes — hauling tools, driving to jobsites, pulling trailers — you need commercial auto. Personal auto policies exclude regular business use. An at-fault accident in a work vehicle without commercial auto is an uninsured event." },
+  { q: "What is hired and non-owned auto coverage?", a: "Hired auto covers vehicles you rent for business; non-owned auto covers employees driving their own vehicles on your business. Both are inexpensive but important endorsements — if anyone runs an errand or makes a delivery for your business in a personal vehicle, non-owned auto responds." },
+  { q: "How do additional-insured endorsements work in contractor insurance?", a: "Additional-insured endorsements extend your GL coverage to another party — typically a GC or project owner — so they're covered as an insured under your policy for liability arising from your work. GC subcontracts almost always require you to add the GC as additional insured. Blanket AI endorsements cover all GCs who require it without individual endorsements." },
+  { q: "Does my GL cover work performed by my subcontractors?", a: "It depends on your policy. Some GL forms exclude work performed by subcontractors; others include it. For contractors who use subs, this provision is critical — especially for completed-operations claims where the sub's work failed. Always verify before binding." },
+  { q: "What is an experience modification factor and how does it affect workers' comp?", a: "After three years with coverage, an experience mod is calculated based on your actual claims history versus expected losses for your payroll and codes. A mod below 1.0 reduces your premium; above 1.0 increases it. One serious lost-time claim can move your mod for three years." },
+  { q: "What is the difference between occurrence and claims-made GL?", a: "An occurrence policy covers claims arising from work done during the policy period, regardless of when the claim is filed — ideal for contractors with completed-operations exposure. A claims-made policy only covers claims filed while the policy is active, creating a tail risk when you switch carriers. Most contractors should carry occurrence-based GL." },
+  { q: "How do I get a certificate of insurance issued for a client or GC?", a: "After binding coverage, your agent issues certificates of insurance listing the required additional insureds. We generate certificates quickly and can accommodate GC-specific additional-insured endorsement requirements — same-day in most cases." },
+  { q: "Will you insure a contractor with prior losses?", a: "Often yes. We have admitted and E&S markets for contractors with prior GL claims, workers' comp losses, or difficult project types. Tell us your situation — most loss histories are insurable with the right market and program structure." },
+  { q: "Do you write contractor insurance in all 50 states?", a: "Yes. Contractors Choice Agency is licensed in all 50 states and writes contractor programs nationwide — Texas, California, Florida, the Northeast, Midwest, Southeast, Mountain West, and everywhere contractors work." },
+  { q: "How fast can we get a contractor insurance quote?", a: "Typically 15 minutes on a call. We ask about your trade, revenue, payroll, loss history, and coverage needs — then shop the right markets and come back with real numbers. Not a ballpark, not a callback tomorrow — real quotes in 15 minutes." },
+  { q: "Should I bundle all my contractor coverage with one program?", a: "Usually yes. A coordinated program — GL, workers' comp, commercial auto, tools, umbrella — closes gaps between policies and is typically cheaper and cleaner than placing separate policies from separate carriers. Coordinated programs also simplify certificates and additional-insured management." },
+  { q: "What does E&S market mean for contractor insurance?", a: "E&S (excess and surplus lines) markets write coverage that standard (admitted) carriers won't touch — difficult project types, prior losses, specialty trades, or unusual exposures. For contractors in hard-to-place situations, E&S markets are often the solution that makes coverage available at all." },
 ];
 
 /* ============================================================
-   GENERAL FAQs — reused as the tail on service & location pages
-   so every page carries 20 FAQs (composed via buildPageFaqs)
+   GENERAL FAQ
    ============================================================ */
-export const GENERAL_FAQS: FAQItem[] = [
-  {
-    q: "How much does this coverage cost for a framing contractor?",
-    a: "Most framers pay $1,500–$4,500 a year for $1M/$2M general liability, with workers' comp rated on payroll at class 5403 and tools floaters based on scheduled gear. We quote the full program in about 15 minutes and show every market's price.",
-  },
-  {
-    q: "Do you insure framing contractors in all 50 states?",
-    a: "Yes. Contractors Choice Agency is licensed in all 50 states and writes framing crews from the Sun Belt and Texas to the Pacific Northwest, Rocky Mountain West, and Northeast.",
-  },
-  {
-    q: "How fast can I get a quote and a certificate?",
-    a: "About 15 minutes for a standard program. Once bound, we turn around additional-insured certificates, waivers of subrogation, and primary/non-contributory endorsements usually within minutes.",
-  },
-  {
-    q: "What workers' comp class code applies to framing?",
-    a: "Wood framing and rough carpentry is typically coded under NCCI class 5403 (Carpentry). Correct classification keeps you from overpaying or facing an audit surprise — and ensures claims aren't denied for misclassification.",
-  },
-  {
-    q: "Does the policy cover falls from height?",
-    a: "We place general liability that specifically covers two- and three-story framing, truss setting, and roof work. Many budget contractor policies exclude work above one or two stories — we make sure yours does not.",
-  },
-  {
-    q: "Are my tools covered on the jobsite?",
-    a: "Tools are covered under a tools & equipment (inland marine) policy, not GL or property. We schedule nail guns, saws, generators, and compressors at replacement cost so jobsite and truck theft is covered.",
-  },
-  {
-    q: "What limits should a framing contractor carry?",
-    a: "Most residential framers carry $1M/$2M GL with a $2M–$5M umbrella. Commercial and multifamily GCs often require $2M–$5M limits plus additional-insured status. We size limits to your actual contract requirements.",
-  },
-  {
-    q: "Do I need commercial auto for my work truck?",
-    a: "Yes — personal auto excludes business use and will deny claims when you haul lumber or tools. Commercial auto covers your trucks, trailers, and lumber haulers, including hired/non-owned vehicles.",
-  },
-  {
-    q: "Can you cover framers with prior claims or cancellations?",
-    a: "Often, yes. We have excess-and-surplus (E&S) markets for contractors with loss runs, cancellations, or tough exposures that standard markets decline.",
-  },
-  {
-    q: "How do you handle subcontracted framing work?",
-    a: "Your GL doesn't cover independent subs — they should carry their own and name you additional insured. We set up certificate tracking and additional-insured requirements so subcontracted work doesn't become your liability.",
-  },
-  {
-    q: "What happens if there's a claim?",
-    a: "You reach a person with context, not a queue. We respond within 2 hours, help you document the loss, and manage the claim with the carrier so it's paid correctly and your operation keeps moving.",
-  },
-  {
-    q: "Why use a specialty framing insurance broker?",
-    a: "Framing has fall, nail-gun, saw, and theft exposures that generic carriers exclude or misprice. A specialty broker knows the class codes, the height exclusions to avoid, the markets that write framers, and how to manage a framing claim.",
-  },
-];
-
-/** Compose a 20-item FAQ list for any page: specific FAQs first, then general fill. */
-export function buildPageFaqs(specific: FAQItem[], count = 20): FAQItem[] {
-  const seen = new Set<string>();
-  const out: FAQItem[] = [];
-  for (const f of [...specific, ...GENERAL_FAQS]) {
-    const key = f.q.toLowerCase().slice(0, 60);
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(f);
-    if (out.length >= count) break;
-  }
-  return out;
-}
-
-/* ============================================================
-   LOCATION FAQ EXTRAS — composed with GENERAL_FAQS on location pages
-   ============================================================ */
-export const LOCATION_FAQ_BASE: FAQItem[] = [
-  {
-    q: "Are you licensed to insure framing contractors in this region?",
-    a: "Yes. Contractors Choice Agency is licensed in all 50 states, so we can bind and service framing contractor coverage in this region and coordinate certificates for work that crosses state lines.",
-  },
-  {
-    q: "Do regional building codes affect my framing coverage?",
-    a: "They can. Wind, seismic, wildfire, and energy-code requirements vary regionally and influence both how you frame and how the risk is underwritten. We account for the region's code environment when structuring your program.",
-  },
-  {
-    q: "Can you meet local GC and developer insurance requirements here?",
-    a: "Yes. We routinely issue the additional-insured status, waivers of subrogation, and primary/non-contributory endorsements that local general contractors and developers require before you set the first plate.",
-  },
-  {
-    q: "Do you handle seasonal framing cycles in this market?",
-    a: "We do. We right-size coverage and payroll reporting for seasonal crew scaling and can structure policies to match your region's build season, including short-term project and installed-material coverage.",
-  },
-  {
-    q: "How do storm and weather exposure affect my premium here?",
-    a: "Wind, named-storm, hail, and freeze exposures vary by region and affect builder's risk, property, and auto pricing. We shop markets that write your region and structure deductibles so you're protected without overpaying.",
-  },
-  {
-    q: "Can you add a project-specific builder's risk for a local build?",
-    a: "Yes. For larger or unusual local projects we can write a project-specific builder's risk policy that covers the structure and materials during construction, in addition to your ongoing program.",
-  },
-  {
-    q: "Do you provide certificates to local building departments and GCs?",
-    a: "Yes. We supply the certificates of insurance, license bonds, and additional-insured endorsements that local building departments, GCs, and developers require — turned around fast.",
-  },
-  {
-    q: "Who services my policy if my crew works across multiple regions?",
-    a: "We do — coast to coast. Because we're licensed everywhere, a single program can follow your crews across regional lines, with one point of contact for certificates, endorsements, and claims.",
-  },
+export const GENERAL_FAQS = [
+  { q: "How much does contractor insurance cost?", a: "Cost depends on trade, revenue, payroll, crew size, and loss history. We quote your actual operation in about 15 minutes — never a generic ballpark from a standard commercial form." },
+  { q: "Do you write contractor insurance in all 50 states?", a: "Yes. Contractors Choice Agency is licensed in all 50 states and writes contractor programs nationwide across every trade." },
+  { q: "How fast can we get a quote?", a: "Typically 15 minutes on a call. We ask about your trade, revenue, payroll, loss history, and coverage needs — then come back with real quotes from specialty contractor markets." },
+  { q: "Will you insure a contractor with prior losses?", a: "Often yes. We have admitted and E&S markets for contractors with prior GL claims, workers' comp losses, or difficult project types. Tell us your situation and we'll find a market." },
+  { q: "Should I bundle all my contractor coverage with one program?", a: "Usually yes. A coordinated program closes gaps between policies and is typically cheaper and cleaner than separate policies from separate carriers — especially at claim time." },
+  { q: "What does an A-rated carrier mean and why does it matter?", a: "A.M. Best ratings reflect a carrier's financial strength and ability to pay claims. We place coverage with A-rated carriers so the coverage is there when a completed-ops claim, a workers' comp injury, or a tools theft hits." },
+  { q: "What's the difference between occurrence and claims-made GL?", a: "Occurrence covers claims from work done during the policy period, whenever filed. Claims-made covers only claims filed while the policy is active. For contractors with completed-operations exposure, occurrence-based GL is strongly preferred." },
+  { q: "Do additional-insured requirements differ by GC?", a: "Yes. Some GCs require blanket AI endorsements; others specify specific endorsement forms (CG 20 10, CG 20 37). We review your subcontract requirements and build the AI endorsements to match exactly what's required." },
+  { q: "What information do I need to get a contractor insurance quote?", a: "Trade type, annual revenue, payroll and crew size, vehicles, tools value, project types, current coverage, and loss history. The more detail, the more accurate the quote." },
+  { q: "Can I get professional liability on top of GL?", a: "Yes — and you should if you provide design-build, specifications, project management, or consulting services. GL doesn't cover errors in professional services; E&O/professional liability is a separate policy that does." },
+  { q: "How do I know if my GL has a subcontractor exclusion?", a: "Request a copy of your GL policy form and look for endorsements titled 'exclusion — work performed by subcontractors' or 'independent contractor exclusion.' If you're not sure, send us the policy and we'll review it." },
+  { q: "What is the completed-operations aggregate and how is it different from the general aggregate?", a: "Your GL policy has two aggregates: the general aggregate covers premises/operations claims; the products-completed operations aggregate covers completed-operations claims. These are separate pools — check both limits, not just the general aggregate." },
+  { q: "Do you offer payment plans for contractor insurance?", a: "Yes. Most of our carrier programs offer monthly or quarterly installment payment options. We can structure your program payments to match your project billing cycle when possible." },
+  { q: "What if my business is new or under a year old?", a: "New ventures are insurable — often at the same rates as established operations with clean loss histories. Some carriers require more information for startups; we know which markets are new-venture friendly." },
 ];
 
 /* ============================================================
-   SERVICE DETAIL — per-service editorial content
+   SERVICE DETAIL
    ============================================================ */
 export interface ServiceDetail {
   heroBlurb: string;
   whatsCovered: string[];
   whoItsFor: string[];
   whyCca: string[];
-  faqs: FAQItem[];
+  faqs: { q: string; a: string }[];
 }
 
 export const SERVICE_DETAIL: Record<string, ServiceDetail> = {
   "general-liability": {
-    heroBlurb:
-      "Third-party bodily injury and property damage protection for your framing crews, jobsites, and subcontracted work — including products-completed operations and the additional-insured certificates that get you onto the project.",
-    whatsCovered: [
-      "Bodily injury to visitors, other trades, and the public on your jobsite",
-      "Property damage caused by your framing operations or subcontracted work",
-      "Products-completed operations for framing you've finished",
-      "Defense costs and legal fees when you're named in a lawsuit",
-      "Additional-insured status for the GCs and developers you frame for",
-      "Fire damage to property you're working on (with proper limits)",
-    ],
-    whoItsFor: [
-      "Residential framing contractors and rough carpentry crews",
-      "Commercial and multifamily framing subcontractors",
-      "Crews that frame over two stories or set roof trusses",
-      "Framers who subcontract portions of their work",
-      "Any framer whose GC requires additional-insured certificates",
-    ],
-    whyCca: [
-      "GL placed WITHOUT the height exclusions that haunt budget policies",
-      "Additional-insured and waiver-of-subrogation endorsements issued fast",
-      "Limits scaled to what your commercial contracts actually require",
-    ],
+    heroBlurb: "The foundational contractor insurance policy — covering third-party bodily injury and property damage from your operations, including the completed-operations section that protects you after the job is done. Understand it before you bind it.",
+    whatsCovered: ["Bodily injury to clients, visitors, and third parties", "Property damage caused by your work", "Completed-operations liability after project punch-out", "Defense costs and legal fees", "Products-completed operations coverage", "Additional-insured endorsements for GCs and project owners"],
+    whoItsFor: ["Every contractor who performs physical work", "Contractors required to provide GL certificates to clients or GCs", "Contractors who want to understand their GL before binding it", "Any contractor with employees, subcontractors, or project exposure"],
+    whyCca: ["Occurrence-based GL preferred for completed-ops exposure", "No subcontractor exclusion — critical for GCs who use subs", "We explain what you're buying before you bind it"],
     faqs: [
-      {
-        q: "What does general liability cover for a framing contractor?",
-        a: "GL covers third-party bodily injury and property damage caused by your framing operations — a visitor hurt on your jobsite, damage you cause to adjacent property, or a completed-operations claim after the frame is up. It does not cover your own injuries (that's workers' comp) or your own tools (that's a tools floater).",
-      },
-      {
-        q: "Does framing GL cover work above two stories?",
-        a: "It should. Many low-cost contractor policies exclude work over one or two stories or exclude roof work entirely. Because framing is a height trade, we place GL that specifically covers two- and three-story framing, truss setting, and roof work.",
-      },
-      {
-        q: "What's the difference between GL and workers' comp for framers?",
-        a: "GL covers third parties (other people and their property). Workers' comp covers your own employees if they're hurt on the job. You need both — GCs require GL certificates, and state law requires workers' comp for your W-2 crew.",
-      },
-      {
-        q: "Why do GCs require me to add them as additional insured?",
-        a: "Additional-insured status extends your GL to the GC for your operations, so if a claim arises from your framing work your policy responds first. It's a standard contract requirement, along with a waiver of subrogation and primary/non-contributory language. We issue these routinely.",
-      },
-      {
-        q: "Does GL cover fire damage to the building I'm framing?",
-        a: "Partially. GL typically includes limited coverage for fire damage to property in your care (often a $50,000 or $100,000 sublimit), but the structure itself should be covered under builder's risk. We coordinate both so the frame is protected during construction.",
-      },
-      {
-        q: "Are framing subcontractors covered under my GL?",
-        a: "No. Independent subcontractors need their own GL and should name you additional insured. If an uninsured sub causes a loss, you can be pulled in. We help set up certificate tracking so subcontracted work doesn't become your liability.",
-      },
-      {
-        q: "What GL limits do framing contractors need?",
-        a: "Most residential framers carry $1M per occurrence / $2M general aggregate. Commercial and multifamily GCs often require $2M or $5M limits — we add an umbrella to reach them when needed.",
-      },
-      {
-        q: "How is framing GL premium calculated?",
-        a: "GL for contractors is usually rated on payroll and subcontractor cost, sometimes on revenue. Accurate classification and documented loss control keep the premium fair. We document your real operation so you're not rated on a worst-case guess.",
-      },
+      { q: "What does GL actually cover for a contractor?", a: "GL covers third-party bodily injury and property damage from your operations — while you're working and after the project is complete (completed operations). It does not cover your own property, your employees (that's workers' comp), or professional errors in design or advice (that's professional liability/E&O)." },
+      { q: "What's the completed-operations section?", a: "The completed-operations section is a separate coverage area in your GL policy that covers claims arising after a project is finished. A structural defect discovered 18 months after punch-out, water damage from a failed roof, or an electrical fault that causes a fire later — these are completed-operations claims. Many GL policies underwrite this section with low limits or exclude it entirely." },
+      { q: "Should I carry occurrence or claims-made GL?", a: "For contractors with completed-operations exposure — which is essentially every contractor who finishes physical work — occurrence-based GL is strongly preferred. Occurrence covers claims arising from work done during the policy period, whenever the claim is filed. Claims-made only covers claims filed while the policy is active, creating tail risk when you switch carriers." },
+    ],
+  },
+  "professional-liability": {
+    heroBlurb: "Errors and omissions (E&O) coverage for the professional services component of contractor work — the gap GL explicitly excludes. Essential for design-build, consulting, and project management, and increasingly required in GC subcontracts.",
+    whatsCovered: ["Errors in plans, specifications, or designs", "Project management and scheduling failures", "Consulting advice that leads to client financial loss", "Design-build professional services liability", "Defense costs for professional negligence claims", "Subcontractor professional liability in your chain"],
+    whoItsFor: ["Design-build contractors who provide drawings or specs", "Project managers and construction managers", "Contractors who write specifications or RFIs", "Firms whose GC contracts require E&O coverage"],
+    whyCca: ["Clear explanation of when E&O is needed vs. when GL is sufficient", "Professional liability paired with GL for seamless coverage", "Design-build programs that address both physical and professional exposure"],
+    faqs: [
+      { q: "How do I know if I need professional liability?", a: "If you provide any professional services beyond physical labor — design-build, specifications, project management, consulting, scheduling, commissioning — you have professional liability exposure that GL doesn't cover. The test: if a client could sue you for a bad decision rather than physical damage, you need E&O." },
+      { q: "Does professional liability cover the same claims as GL?", a: "No — they cover different claim types. GL covers bodily injury and property damage from physical work. Professional liability covers financial losses arising from professional errors — a design that had to be rebuilt, a specification that caused a cost overrun, a management decision that delayed a project and cost the owner money." },
+      { q: "Is professional liability claims-made or occurrence?", a: "Almost all professional liability policies are claims-made. This means coverage only applies if the claim is filed while the policy is active. When you discontinue the policy, you need a tail extension (extended reporting period) to maintain coverage for prior professional work." },
     ],
   },
   "workers-compensation": {
-    heroBlurb:
-      "Coverage for the injury patterns unique to framing crews — falls from height, nail-gun and saw lacerations, struck-by and material-handling injuries — with correct class 5403 coding so you're not overpaying or underinsured.",
-    whatsCovered: [
-      "Medical treatment for on-the-job framing injuries",
-      "Disability and lost-wage benefits for injured crew members",
-      "Fall-from-height and scaffold injuries",
-      "Nail-gun, saw, and laceration claims",
-      "Struck-by and material-handling injuries",
-      "Employers' liability (Part Two) protection",
-    ],
-    whoItsFor: [
-      "Framing contractors with W-2 employees",
-      "Crews working at height on trusses, walls, and roofs",
-      "Sole proprietors who elect to cover themselves",
-      "Any framer required by state law to carry workers' comp",
-    ],
-    whyCca: [
-      "Correct NCCI class 5403 coding — not generic construction codes",
-      "Fall-protection documentation that supports better rates",
-      "Aggressive claims management to protect your experience modifier",
-    ],
+    heroBlurb: "Wage replacement and medical benefits for employees injured on the job — required by law in virtually every state. Class codes, experience mods, and audit mechanics explained for every contractor trade.",
+    whatsCovered: ["Medical treatment for work injuries", "Lost wage replacement and disability benefits", "Rehabilitation and return-to-work support", "Employers' liability (Part Two) protection", "Coverage across all trade class codes", "Seasonal and part-time employee coverage"],
+    whoItsFor: ["Any contractor with W-2 employees (required in most states)", "Firms with multi-trade crews needing correct class coding", "Contractors who want to understand their experience mod", "New ventures that need workers' comp from day one"],
+    whyCca: ["Class codes assigned to actual trade work — not generic construction codes", "Experience mod review and explanation so you understand what's driving your premium", "Audit preparation so there are no surprise bills after the year ends"],
     faqs: [
-      {
-        q: "What is the workers' comp class code for framing?",
-        a: "Wood framing and rough carpentry is most often coded under NCCI class 5403 (Carpentry). Some operations split out roof truss setting, siding, or interior finish work into separate codes. Correct coding keeps your premium fair and prevents audit surprises.",
-      },
-      {
-        q: "How much is workers' comp for a framing contractor?",
-        a: "Workers' comp is rated on payroll by class code. Framing (5403) carries a higher rate than office work because of the fall and tool exposure, but good loss control and a clean experience modifier meaningfully reduce it. We quote based on your actual payroll and history.",
-      },
-      {
-        q: "Do owner-operators need to carry workers' comp on themselves?",
-        a: "It depends on your state and business structure. Many states exempt sole proprietors and single-member LLC owners, but you can elect coverage, and if you have any W-2 employees you must carry it. We'll tell you exactly what your state requires.",
-      },
-      {
-        q: "Will one claim make my rates unaffordable?",
-        a: "A serious claim affects your experience modifier, but the impact is bounded and improves over time. The best defense is correct class coding, a documented fall-protection program, and aggressive claim management — all of which we provide to keep your mod down.",
-      },
-      {
-        q: "How do you handle fall-from-height claims?",
-        a: "Falls are the most common serious framing injury. We respond within 2 hours, make sure the injured framer gets care fast, and manage the claim with the carrier to control cost and get the crew member back to work. Good handling protects both the worker and your modifier.",
-      },
-      {
-        q: "What if my crew works in multiple states?",
-        a: "Workers' comp follows where the work is performed, and each state has its own rules and rates. Because we're licensed in all 50 states, we structure a program that covers your crews across state lines without gaps.",
-      },
-      {
-        q: "Are 1099 subcontractors covered under my workers' comp?",
-        a: "Generally no — true independent contractors carry their own. But many states apply a 'statutory employee' test, and misclassifying W-2 workers as 1099 can leave you liable. We help you classify workers correctly and document it.",
-      },
-      {
-        q: "How do audits work for framing workers' comp?",
-        a: "At policy end, the carrier audits your actual payroll by class code and true-ups the premium. If your payroll was underreported you'll owe more; if overreported, you'll get a return. We help you classify payroll correctly up front to avoid audit shock.",
-      },
+      { q: "How are workers' comp class codes determined?", a: "Class codes are set by the nature of the work performed, not the company name. A carpentry crew is coded 5645; an electrical crew is coded 5190; an HVAC crew is coded 5537. Each code has a rate per $100 of payroll. Using the wrong code means paying the wrong rate — either too much or too little, both of which create problems." },
+      { q: "What is an experience mod and how is it calculated?", a: "An experience modification factor (mod) compares your actual loss history to the expected losses for your payroll and class codes. A mod below 1.0 means you've had fewer claims than expected and you pay less. A mod above 1.0 means more claims than expected and you pay more. It's recalculated annually after three years of coverage." },
+      { q: "What happens at a workers' comp audit?", a: "At audit, the carrier verifies your actual payroll against what you reported at the start of the policy. If you underreported payroll, you owe additional premium. If you overreported, you get a refund. The audit also verifies subcontractor status — if a sub doesn't have their own coverage, their payroll is often added to your audit." },
     ],
   },
   "commercial-auto": {
-    heroBlurb:
-      "Coverage for the pickup trucks, dump trailers, and lumber haulers that move your crew and materials between jobsites — including hired/non-owned vehicles and loading liability.",
-    whatsCovered: [
-      "Liability for at-fault accidents in work trucks and trailers",
-      "Physical damage (comprehensive & collision) to owned vehicles",
-      "Lumber and material-hauling trailers",
-      "Hired and non-owned auto for employees driving their own trucks",
-      "Uninsured and underinsured motorist coverage",
-      "Loading and unloading liability",
-    ],
-    whoItsFor: [
-      "Framers with owned pickup trucks, dump trailers, or haulers",
-      "Crews that transport lumber, trusses, and materials",
-      "Operations whose employees drive personal trucks for work",
-      "Any framer whose personal auto policy would deny a work claim",
-    ],
-    whyCca: [
-      "Business-use rating that won't deny your jobsite driving",
-      "Trailer and lumber-hauling exposure factored in",
-      "Fleet and single-vehicle programs available",
-    ],
+    heroBlurb: "Liability and physical damage for contractor vehicles — trucks, vans, trailers, and everything between jobsites. Includes hired and non-owned auto when your employees use personal vehicles on business.",
+    whatsCovered: ["Liability for at-fault accidents in owned vehicles", "Physical damage (collision and comprehensive)", "Hired and non-owned auto liability", "Uninsured/underinsured motorist coverage", "Trailer liability and physical damage", "Loading and unloading liability"],
+    whoItsFor: ["Contractors with owned trucks, vans, or trailers", "Firms whose employees use personal vehicles on business", "Contractors who rent vehicles for projects", "Any contractor whose personal auto policy excludes business use"],
+    whyCca: ["Clear explanation of when personal auto is insufficient", "Commercial auto coordinated with tools policy for complete protection", "Hired and non-owned auto included for employee vehicles"],
     faqs: [
-      {
-        q: "Why can't I use my personal auto policy for my work truck?",
-        a: "Personal auto policies typically exclude business use and will deny a claim when you're hauling lumber, tools, or a crew to a jobsite. Commercial auto is rated for business use and covers the real way framers drive.",
-      },
-      {
-        q: "What is hired and non-owned auto, and do framers need it?",
-        a: "Hired auto covers rental vehicles; non-owned auto covers employees driving their own personal vehicles for your business. If any crew member runs materials in their own truck, you want non-owned coverage — it protects your business when their personal policy falls short.",
-      },
-      {
-        q: "Are the lumber and tools in my truck covered by auto?",
-        a: "Liability for an at-fault crash is covered, but the cargo (lumber, tools) generally is not. Lumber in transit is an installation floater / inland marine matter, and tools are a tools & equipment matter. We coordinate all three.",
-      },
-      {
-        q: "Do I need commercial auto for a dump trailer?",
-        a: "Yes. Trailers need their own physical damage coverage and the truck towing them needs adequate liability. We schedule trailers and make sure the combined rig is properly insured.",
-      },
-      {
-        q: "How is commercial auto rated for framing contractors?",
-        a: "Premium is based on the vehicles (type, value, use), drivers (records and experience), and radius of operation. Clean driving records and accurate vehicle scheduling keep the cost down.",
-      },
-      {
-        q: "What if an employee gets in an accident in a company truck?",
-        a: "Commercial auto covers at-fault liability and physical damage for company vehicles. We respond fast, coordinate the claim, and get the truck repaired or replaced so the crew keeps moving.",
-      },
-      {
-        q: "Do you insure framing fleets or just single trucks?",
-        a: "Both. Whether you run a single work truck or a fleet of haulers and trailers, we structure a commercial auto program that covers every vehicle and driver.",
-      },
-      {
-        q: "Does commercial auto cover loading and unloading lumber?",
-        a: "Many policies include some loading/unloading liability, but the cargo itself is an inland marine matter. We make sure the liability gap is closed and pair the auto policy with a tools and materials floater.",
-      },
+      { q: "Why won't my personal auto policy cover my work vehicle?", a: "Personal auto policies exclude regular business use — vehicles used routinely for work purposes. If you're driving to jobsites, hauling materials, or pulling a work trailer consistently, the personal policy won't cover an at-fault accident. Commercial auto is required for vehicles used regularly in your business." },
+      { q: "What's the difference between hired and non-owned auto?", a: "Hired auto covers vehicles you rent for business purposes. Non-owned auto covers employees driving their personal vehicles on your business — errands, material pickup, project visits. Both are inexpensive endorsements that are important when your business uses vehicles you don't own." },
+      { q: "Does commercial auto cover the tools in my truck?", a: "No. Commercial auto covers the vehicle and liability from accidents. The contents of the vehicle — tools, materials, equipment — are not covered by auto. Tools in your truck need tools and equipment (inland marine) coverage. We coordinate both so you know exactly what's covered." },
     ],
   },
-  "builders-risk": {
-    heroBlurb:
-      "Course-of-construction coverage for the building you're framing — lumber packages, installed materials, and labor — against fire, wind, theft, and vandalism while the project is open to loss.",
-    whatsCovered: [
-      "Lumber packages and framing materials on site",
-      "Installed framing, sheathing, and labor in place",
-      "Fire, wind, theft, and vandalism during construction",
-      "Soft costs and delayed opening (optional)",
-      "Materials in transit and at staging areas",
-      "Scaffolding, temporary structures, and forms",
-    ],
-    whoItsFor: [
-      "Framers responsible for the materials they install",
-      "Contractors whose GC's master policy leaves gaps",
-      "Owners and builders on custom or spec homes",
-      "Crews framing in wildfire, wind, or high-theft areas",
-    ],
-    whyCca: [
-      "Closes the gap between delivered materials and installed work",
-      "Written for the project's real value and construction timeline",
-      "Covers the exposures GC master policies often miss",
-    ],
+  "commercial-umbrella": {
+    heroBlurb: "Excess liability above GL, commercial auto, and employers liability — explained clearly. How umbrella stacks, when GC subcontracts require it, and how much coverage you actually need.",
+    whatsCovered: ["Excess limits above GL per-occurrence limit", "Excess limits above commercial auto liability", "Excess limits above employers liability", "Defense costs above primary policy limits", "Follow-form coverage matching primary GL terms", "Additional-insured coverage through umbrella layer"],
+    whoItsFor: ["Contractors whose GC subcontracts require $2M–$5M total liability limits", "Firms doing high-value commercial projects with significant exposure", "Any contractor who wants meaningful protection above primary limits", "Contractors who want to understand how umbrella works before buying it"],
+    whyCca: ["Clear explanation of how umbrella stacks and when it triggers", "Umbrella placed with carriers that provide follow-form coverage through primary", "Limits from $1M to $10M+ depending on project and contract requirements"],
     faqs: [
-      {
-        q: "What does builder's risk cover for a framing project?",
-        a: "Builder's risk (course of construction) covers the structure and materials during construction — fire, wind, theft, vandalism, and some weather damage to the lumber package and installed framing. It protects the value of what you're building while it's most exposed.",
-      },
-      {
-        q: "If the GC carries builder's risk, do I need my own?",
-        a: "Not always, but gaps are common. The GC's master policy may not cover materials you've delivered but not yet installed, or may carry a large deductible that falls on you. We review the GC's program and add an installation floater if there's a gap.",
-      },
-      {
-        q: "Does builder's risk cover lumber stolen from the jobsite?",
-        a: "Yes — theft of materials from the site is a covered cause of loss under most builder's risk forms, subject to the policy terms and deductible. Given how common lumber theft is, this is one of the most valuable parts of the coverage.",
-      },
-      {
-        q: "Who buys builder's risk — the framer, the GC, or the owner?",
-        a: "It varies by contract. Often the owner or GC carries a master policy. When you're responsible for materials and labor you've put in place, an installation floater or your own builder's risk makes sure you're protected regardless of what the GC carries.",
-      },
-      {
-        q: "Does builder's risk cover wind and weather?",
-        a: "Most forms cover wind and weather damage to the structure under construction, though named-storm and hurricane coverage may carry separate deductibles in coastal zones. We structure the policy for your region's weather exposure.",
-      },
-      {
-        q: "What are soft costs in builder's risk?",
-        a: "Soft costs are the additional expenses from a construction delay — extra interest, real estate taxes, rent, and re-engineering. Soft-cost coverage is optional but valuable on larger projects where a fire or storm could push back completion.",
-      },
-      {
-        q: "How is the builder's risk limit determined?",
-        a: "The limit should equal the completed value of the project (materials, labor, and profit) at the time of loss. We help you set the limit correctly so the structure is fully insured throughout the build.",
-      },
-      {
-        q: "Does builder's risk cover fire damage during framing?",
-        a: "Yes. Fire is a covered peril, and a framed structure full of combustible lumber is exactly when the exposure peaks. Builder's risk covers fire damage to the structure and materials during construction.",
-      },
+      { q: "How does an umbrella interact with my GL policy?", a: "The umbrella sits above your GL (and auto, and employers liability) and responds when those underlying limits are exhausted. If your GL limit is $1M per occurrence and a judgment is $2M, the umbrella pays the remaining $1M. The umbrella is follow-form — it covers the same claim types as your GL, subject to the same exclusions." },
+      { q: "Why do GC subcontracts require umbrella coverage?", a: "GCs require umbrella because standard $1M GL limits can be exhausted by a single serious completed-operations claim or catastrophic jobsite injury. A $2M/$5M umbrella requirement in a subcontract ensures subcontractors carry meaningful total liability capacity — not just the minimum." },
+      { q: "What does 'follow form' umbrella mean?", a: "A follow-form umbrella follows the terms, conditions, and exclusions of the underlying GL policy. What GL covers, the umbrella covers above it. What GL excludes (pollution, professional errors), the umbrella also excludes. This matters because some specialty exposures need separate coverage at both the primary and umbrella layers." },
     ],
   },
-  "inland-marine-equipment": {
-    heroBlurb:
-      "Scheduled tools-and-equipment coverage for the pneumatic nailers, miter saws, generators, and compressors that walk off jobsites — plus installation floaters that cover materials in transit to the frame.",
-    whatsCovered: [
-      "Pneumatic nail guns, miter saws, and circular saws",
-      "Generators, air compressors, and lasers",
-      "Theft from jobsites, trucks, and trailers",
-      "Materials in transit to the jobsite (installation floater)",
-      "Mobile equipment and small tools",
-      "Replacement cost on scheduled gear",
-    ],
-    whoItsFor: [
-      "Framers with significant investment in power tools",
-      "Crews whose gear lives on trucks and jobsites",
-      "Contractors responsible for materials in transit",
-      "Any framer who's had tools stolen",
-    ],
-    whyCca: [
-      "Tools scheduled at replacement cost — not depreciated",
-      "Theft coverage that follows your gear wherever it goes",
-      "Installation floaters that close the transit gap",
-    ],
+  "surety-bonds": {
+    heroBlurb: "License bonds, performance bonds, and payment bonds — explained in plain English. What they guarantee, when they're required, and how they differ fundamentally from insurance.",
+    whatsCovered: ["Contractor license bonds (required by state/municipal licensing)", "Performance bonds guaranteeing project completion", "Payment bonds guaranteeing payment to subs and suppliers", "Bid bonds for competitive project bidding", "Maintenance bonds for post-completion warranties", "Court bonds and other judicial surety needs"],
+    whoItsFor: ["Contractors who need a license bond to obtain or renew their state license", "GCs and specialty contractors bidding on public projects (Miller Act / Little Miller Act)", "Contractors whose private project contracts require performance and payment bonds", "Contractors who want to understand bonds before buying them"],
+    whyCca: ["Plain-English explanation of how each bond type works", "License bonds issued quickly — often same-day", "Performance and payment bond programs for contractors with clean financial statements"],
     faqs: [
-      {
-        q: "Does general liability cover my stolen nail guns and saws?",
-        a: "No. GL and commercial property do not cover tools off-premises. Tools are an inland marine (tools & equipment) coverage. We schedule your nail guns, saws, generators, and compressors so theft is covered.",
-      },
-      {
-        q: "How is a tools floater different from commercial property?",
-        a: "Commercial property covers gear at a fixed location like your shop. A tools & equipment (inland marine) floater follows your tools wherever they go — jobsite, truck, trailer — which is where framing tools actually live and get stolen.",
-      },
-      {
-        q: "Is tools coverage replacement cost or actual cash value?",
-        a: "We write tools & equipment at replacement cost so a stolen nailer or saw is replaced new, not depreciated to pennies. That's the difference between staying on schedule and buying gear out of pocket.",
-      },
-      {
-        q: "What is an installation floater and why do framers need it?",
-        a: "An installation floater covers materials (lumber, trusses, hardware) while in transit to the jobsite and until they're installed and covered by builder's risk. It closes the gap between the supplier's truck and the structure.",
-      },
-      {
-        q: "How do I value my tools for a floater?",
-        a: "We build a schedule listing each major tool and its replacement value. You can update the schedule as you add gear. Accurate scheduling keeps premiums fair and claims fast.",
-      },
-      {
-        q: "Are tools stolen from my truck covered?",
-        a: "Yes — a tools & equipment floater covers theft from your truck, trailer, and jobsite, subject to the policy terms and deductible. Given how often tools are stolen from vehicles, this is essential for framers.",
-      },
-      {
-        q: "Does the floater cover borrowed or rented tools?",
-        a: "It can. We can extend coverage to borrowed and rented equipment, which matters if you rent lifts, compressors, or specialty tools for a job. Tell us what you use and we'll structure it.",
-      },
-      {
-        q: "How fast are tools claims paid?",
-        a: "Once you provide a police report (for theft) and the schedule, tools claims are typically paid quickly so you can replace gear and get back to work. We help you document to keep it moving.",
-      },
+      { q: "What's the fundamental difference between a bond and insurance?", a: "Insurance pays the insured when covered losses occur. A bond guarantees to a third party (the project owner, the licensing authority) that you'll perform your obligations. If you fail, the bonding company pays the third party — and then comes after you for reimbursement. Insurance doesn't seek reimbursement from the insured; bonds do." },
+      { q: "What is a license bond and when is it required?", a: "A contractor license bond is required by most states and municipalities as a condition of obtaining or maintaining a contractor's license. The bond amount is set by the licensing authority. If you violate licensing laws, the bond compensates injured parties. Without it, you can't legally operate as a licensed contractor in most jurisdictions." },
+      { q: "What is a performance bond?", a: "A performance bond guarantees to the project owner that you'll complete the project per the contract terms. If you default, the bonding company either steps in to complete the project or compensates the owner for the cost of completion. Performance bonds are required by federal law for public contracts over $100K (Miller Act) and increasingly required on large private projects." },
     ],
   },
-  "property": {
-    heroBlurb:
-      "All-risk commercial property coverage for the framer's shop, storage yard, wall-panel facility, and lumber/inventory — built for the combustible loading and hot-work exposures of a wood operation.",
-    whatsCovered: [
-      "Shop, office, and storage buildings",
-      "Wall-panel and truss fabrication facilities",
-      "Lumber and material inventory",
-      "Office equipment and records",
-      "Equipment breakdown for shop machinery",
-      "Business interruption during restoration",
-    ],
-    whoItsFor: [
-      "Framers with a shop, yard, or prefab facility",
-      "Contractors carrying lumber and material inventory",
-      "Operations with wall-panel or truss production",
-      "Any framer whose business depends on a fixed location",
-    ],
-    whyCca: [
-      "Combustible-loading and hot-work exposure priced correctly",
-      "Equipment and inventory at replacement cost",
-      "Business interruption with adequate restoration period",
-    ],
+  "tools-equipment": {
+    heroBlurb: "Inland marine coverage for contractor tools — what it covers, why commercial property falls short for jobsite use, and how to set blanket limits that actually protect your crew's equipment.",
+    whatsCovered: ["Theft from jobsites and locked vehicles", "Accidental damage and breakage", "Mysterious disappearance", "Fire and smoke damage", "Transit losses during transport", "Scheduled coverage for high-value items"],
+    whoItsFor: ["Any contractor with significant tool and equipment inventory", "Contractors who work across multiple jobsites", "Firms that have experienced jobsite or vehicle theft", "Any contractor whose commercial property policy limits off-premises coverage"],
+    whyCca: ["Clear explanation of why commercial property falls short for jobsite tools", "Blanket tools coverage that follows your crew wherever they work", "Schedule high-value items above the blanket limit individually"],
     faqs: [
-      {
-        q: "What does commercial property cover for a framing business?",
-        a: "It covers your shop, yard, prefab facility, lumber and material inventory, and office equipment against fire, theft, wind, and other covered perils — the fixed-location assets your business depends on.",
-      },
-      {
-        q: "Does commercial property cover my lumber inventory?",
-        a: "Yes. Lumber and material inventory stored at your yard or shop can be scheduled and covered at your location. Materials on the jobsite are a builder's risk / installation floater matter — we coordinate both.",
-      },
-      {
-        q: "Will a property policy cover a wall-panel plant?",
-        a: "Yes, and we tailor it — wall-panel and truss fabrication add manufacturing property and equipment-breakdown exposures. We schedule the production equipment and include business interruption for the restoration period.",
-      },
-      {
-        q: "Why does combustible loading matter for my shop?",
-        a: "A shop full of lumber and sawdust is a higher fire exposure than a typical office, and that affects underwriting and pricing. We document your housekeeping and fire-protection program to get the best terms.",
-      },
-      {
-        q: "Is equipment breakdown included?",
-        a: "It can be. Equipment breakdown covers internal mechanical and electrical failures of shop machinery — saws, compressors, panel equipment — that standard property excludes. We include it for operations with significant machinery.",
-      },
-      {
-        q: "Does property cover business interruption if my shop burns?",
-        a: "Business interruption coverage pays your lost income and ongoing expenses during restoration. For a framing business, that can mean the difference between surviving a fire and closing. We size the restoration period to your real recovery time.",
-      },
-      {
-        q: "Replacement cost or actual cash value for my property?",
-        a: "We recommend replacement cost so a loss restores your shop and equipment new, not depreciated. For specialized or older equipment, ACV can leave you dramatically underinsured.",
-      },
-      {
-        q: "How is commercial property rated for framers?",
-        a: "Premium reflects construction type, protection (sprinklers, alarms), occupancy, lumber inventory value, and fire exposure. Good housekeeping and documented protection programs improve both terms and price.",
-      },
-    ],
-  },
-  "umbrella-excess-liability": {
-    heroBlurb:
-      "Layered limits above your GL, auto, and employers' liability — essential when a fall, a framed-structure fire, or a multi-party jobsite loss could otherwise exhaust your primary coverage.",
-    whatsCovered: [
-      "Additional limits above GL, commercial auto, and employers' liability",
-      "Limits from $2M up to $10M+ for catastrophic claims",
-      "Protection for multi-party jobsite losses",
-      "Coverage that follows the underlying policy form",
-      "Defense contributions on large complex claims",
-    ],
-    whoItsFor: [
-      "Framers whose GC contracts require higher limits",
-      "Crews on commercial and multifamily projects",
-      "Contractors with significant assets to protect",
-      "Any framer whose primary limits no longer match exposure",
-    ],
-    whyCca: [
-      "Limits layered cleanly above your underlying program",
-      "Up to $10M+ available for high-exposure operations",
-      "Priced for framing contractors, not generic small business",
-    ],
-    faqs: [
-      {
-        q: "What does an umbrella policy cover for a framing contractor?",
-        a: "An umbrella adds liability limits above your general liability, commercial auto, and employers' liability. If a serious fall, fire, or jobsite loss exhausts your primary policy, the umbrella pays the layers above — protecting your assets and your contracts.",
-      },
-      {
-        q: "How much umbrella coverage does a framer need?",
-        a: "It's driven by your largest realistic loss and your contract requirements. Many commercial and multifamily GCs require $2M–$5M total limits. We model your worst-case scenarios and size the umbrella to what your work actually demands.",
-      },
-      {
-        q: "Does the umbrella sit over workers' comp too?",
-        a: "It sits over employers' liability (Part Two of workers' comp), not the workers' comp benefit itself. That matters for serious injury claims that exceed primary employers' liability limits.",
-      },
-      {
-        q: "Why would a GC require an umbrella?",
-        a: "Large projects and commercial contracts shift risk down to subcontractors and require proof of high limits — often $2M–$5M. Carrying an umbrella lets you bid that work and protects you from a catastrophic claim.",
-      },
-      {
-        q: "How is umbrella premium calculated?",
-        a: "Umbrella premium is a fraction of your underlying liability cost and reflects your operations, underlying limits, and the umbrella layer chosen. It's one of the most cost-effective ways to add protection.",
-      },
-      {
-        q: "Can I add umbrella limits mid-policy if a contract requires it?",
-        a: "Often yes. If a new project requires higher limits, we can frequently increase the umbrella (subject to underwriting) so you can take the work. Tell us the requirement and we'll move.",
-      },
-      {
-        q: "Does the umbrella cover jobsite fires and product claims?",
-        a: "Yes. An umbrella responds to the same types of claims your underlying GL covers — including framed-structure fires and completed-operations claims — once primary limits are exhausted.",
-      },
-      {
-        q: "What's the difference between umbrella and excess liability?",
-        a: "A true umbrella can drop down to cover some claims not covered by underlying policies; a straight excess policy simply adds limits on top of the same coverage. We place the form that fits your exposure and budget.",
-      },
-    ],
-  },
-  "contractors-bonds": {
-    heroBlurb:
-      "The bonds that keep you legal and competitive — state contractor license bonds, permit bonds, and bid/performance bonds for the GCs and developers who require them before you set the first plate.",
-    whatsCovered: [
-      "State contractor license bonds (CSLB, TREC, ROC, and more)",
-      "Permit and code-compliance bonds",
-      "Bid bonds for project pursuit",
-      "Performance and payment bonds",
-      "Supply bonds for material commitments",
-      "Court and miscellaneous bonds",
-    ],
-    whoItsFor: [
-      "Framers required to hold a state contractor license bond",
-      "Contractors bidding bonded public or commercial work",
-      "Crews needing permit bonds to pull jobsite permits",
-      "Any framer whose GC requires a performance bond",
-    ],
-    whyCca: [
-      "License bonds written for your state's specific requirements",
-      "Bid and performance bond capacity for larger projects",
-      "Bonds coordinated with your insurance program under one roof",
-    ],
-    faqs: [
-      {
-        q: "What's the difference between a bond and insurance?",
-        a: "Insurance protects you against loss. A surety bond is a three-party guarantee — the surety guarantees you'll fulfill an obligation (your license, a contract, a permit). If you don't, the surety pays the obligee and then seeks reimbursement from you.",
-      },
-      {
-        q: "Do framing contractors need a license bond?",
-        a: "In most states, yes — holding a contractor license requires a license bond (surety bond) that guarantees compliance with state contracting law. The amount and form vary by state. We write license bonds for every state we serve.",
-      },
-      {
-        q: "What is a performance bond and when is it required?",
-        a: "A performance bond guarantees you'll complete a project per the contract. Public projects and many commercial GCs require performance and payment bonds, especially above certain contract values. We secure the bonding capacity to pursue that work.",
-      },
-      {
-        q: "How much does a contractor license bond cost?",
-        a: "License bond cost is a small percentage of the bond amount and depends on your credit, license history, and the state's required amount. Most run a few hundred dollars a year. We quote quickly.",
-      },
-      {
-        q: "Can you help me get bonded for a bigger project?",
-        a: "Yes. We work with sureties to establish bonding capacity — single-job and program (aggregate) limits — so you can bid bonded work. We'll help you present your financials and track record to qualify.",
-      },
-      {
-        q: "What's a bid bond?",
-        a: "A bid bond guarantees that if you win a bid, you'll enter the contract and provide a performance bond. It protects the project owner from bidders who back out. We issue bid bonds to support your pursuit of bonded projects.",
-      },
-      {
-        q: "Do permit bonds cost a lot?",
-        a: "Permit and code-compliance bonds are typically inexpensive and required by local building departments to pull permits. We turn them around fast so your schedule isn't held up.",
-      },
-      {
-        q: "Can I get my bonds and insurance from the same place?",
-        a: "Yes — and it's simpler. We write your license, performance, and permit bonds alongside your insurance program, with one point of contact for certificates, endorsements, and renewals.",
-      },
+      { q: "Why won't my commercial property policy cover tools at a jobsite?", a: "Standard commercial property covers property at a fixed, scheduled location — your shop, your office. Tools that leave regularly are only covered at a small off-premises sublimit (typically 10% of the policy limit) and may be excluded entirely during active jobsite use. Tools at a jobsite, in a truck, or in transit need inland marine tools coverage." },
+      { q: "What's the difference between blanket and scheduled tools coverage?", a: "A blanket policy covers the total value of your tool inventory without listing every item. Items above a threshold (typically $1,000–$2,500) should be scheduled individually with their own stated values. Most contractor programs use a combination: blanket for general inventory, scheduled for high-value items like laser levels, generators, and specialty equipment." },
+      { q: "What do I need to document for a tools theft claim?", a: "A list of stolen items with descriptions and approximate values, serial numbers where available, purchase records or receipts, and a police report (required for theft claims). Contractors who maintain a current tools inventory with serial numbers get paid faster and more completely than those who can't document what was taken." },
     ],
   },
 };
 
 /* ============================================================
-   COVERAGE REGIONS — for coverage page
+   COVERAGE REGIONS
    ============================================================ */
 export const AZ_REGIONS = [
-  { name: "Texas & the Southwest", note: "TX, NM, AZ — the busiest framing markets in the country" },
-  { name: "U.S. Southeast", note: "FL, GA, NC, SC — hurricane-zone and high-volume residential framing" },
-  { name: "Rocky Mountain West", note: "CO, ID, UT — Front-Range and Intermountain residential construction" },
-  { name: "Pacific Northwest", note: "OR, WA — wet-climate, seismic-zone framing operations" },
-  { name: "Desert West", note: "AZ, NV — Phoenix and Las Vegas high-volume residential production" },
-  { name: "Great Lakes & Midwest", note: "MI, OH, IL, IN — suburban and rural residential markets" },
-  { name: "Northeast & Mid-Atlantic", note: "NY, NJ, PA, New England — dense residential and remodel work" },
-  { name: "California & West Coast", note: "CA — seismic-zone, WUI, and Title 24 framing environments" },
+  { name: "Texas", note: "DFW, Houston, Austin, San Antonio — major general contracting and specialty trade market" },
+  { name: "California", note: "Bay Area, LA, San Diego — strict licensing, high GL requirements, active commercial market" },
+  { name: "Florida", note: "South Florida, Tampa, Orlando — storm restoration, residential, and commercial construction" },
+  { name: "Southeast", note: "Atlanta, Charlotte, Nashville — fast-growing residential and commercial construction" },
+  { name: "Midwest", note: "Chicago, Columbus, Detroit — diverse trade contractor market, commercial and industrial" },
+  { name: "Northeast", note: "New York, Boston, Philadelphia — dense regulatory environment, high umbrella requirements" },
+  { name: "Mountain West", note: "Denver, Phoenix, Las Vegas, Salt Lake City — growing market across trades" },
+  { name: "Pacific West", note: "Seattle, Portland — active residential and commercial contractor market" },
 ];
 
-/* ============================================================
-   US STATES — for quote form select
-   ============================================================ */
 export const US_STATES = [
   "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
   "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa",
@@ -777,20 +345,16 @@ export const US_STATES = [
   "Wisconsin","Wyoming",
 ];
 
-/* ============================================================
-   Quote form select options (framing-specific)
-   ============================================================ */
 export const QUOTE_SERVICE_TYPES = [
   "General Liability Insurance",
+  "Professional Liability / E&O",
   "Workers' Compensation",
   "Commercial Auto Insurance",
-  "Builder's Risk Insurance",
-  "Tools & Equipment / Inland Marine",
-  "Commercial Property Insurance",
-  "Umbrella / Excess Liability",
-  "Contractor License & Surety Bonds",
+  "Commercial Umbrella Insurance",
+  "Surety Bonds",
+  "Tools & Equipment Coverage",
   "Full program / bundle (recommended)",
-  "Not sure — help me figure it out",
+  "Not sure — help me understand my options",
 ];
 
 export const YEARS_OPTIONS = [
