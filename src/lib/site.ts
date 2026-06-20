@@ -1,11 +1,11 @@
 export const SITE = {
-  name: "Contractor Insurance Info",
+  name: "Contractor Insurance School",
   legalName: "Contractors Choice Agency",
-  domain: "contractorinsuranceinfo.com",
-  url: "https://contractorinsuranceinfo.com",
-  tagline: "The Definitive Resource for Contractor Insurance",
+  domain: "contractorinsuranceschool.com",
+  url: "https://contractorinsuranceschool.com",
+  tagline: "Learn Contractor Insurance. Get the Right Coverage.",
   description:
-    "Contractor Insurance Info — the definitive contractor insurance resource. GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and E&O explained. All 50 states. Get a quote in 15 minutes.",
+    "Contractor Insurance School — the educational platform where contractors learn GL, professional liability, workers' comp, commercial auto, umbrella, bonds, and tools coverage. Taught by specialists. All 50 states. Get a quote in 15 minutes.",
   phone: "844-967-5247",
   phoneHref: "tel:+18449675247",
   email: "josh@contractorschoiceagency.com",
@@ -25,7 +25,7 @@ export const SITE = {
 } as const;
 
 export const BRAND = {
-  brandShort: "Contractor Insurance Info",
+  brandShort: "Contractor Insurance School",
   brandSub: "Contractors Choice Agency",
   nicheShort: "contractor",
   nicheCap: "Contractor",
@@ -43,40 +43,26 @@ export const BRAND = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Coverage Types", href: "/services" },
+  { label: "Coverage Courses", href: "/services" },
   { label: "Coverage Area", href: "/coverage" },
-  { label: "Resources", href: "/blog" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Get Covered", href: "/quote" },
 ] as const;
 
 export const SERVICES = [
   {
     slug: "general-liability",
     title: "General Liability",
-    short: "GL & Completed Ops",
+    short: "GL Insurance",
     description:
-      "Third-party bodily injury, property damage, and completed-operations protection — the foundational policy every contractor must carry and understand.",
+      "The foundational policy every contractor must carry — third-party bodily injury, property damage, and completed operations. Learn what it covers and what it doesn't.",
     icon: "ShieldCheck",
     keywords: [
-      "general liability insurance contractor",
-      "contractor GL coverage explained",
-      "completed operations insurance",
-      "contractor liability guide",
-    ],
-  },
-  {
-    slug: "professional-liability",
-    title: "Professional Liability",
-    short: "E&O / Prof. Liability",
-    description:
-      "Errors and omissions coverage for design-build, consulting, and professional services — what GL doesn't cover and why you may need it.",
-    icon: "FileCheck",
-    keywords: [
-      "professional liability insurance contractor",
-      "contractor E&O insurance explained",
-      "errors omissions construction guide",
-      "design build liability",
+      "contractor general liability insurance school",
+      "GL insurance contractor explained",
+      "completed operations insurance contractor",
+      "contractor liability coverage guide",
     ],
   },
   {
@@ -84,13 +70,13 @@ export const SERVICES = [
     title: "Workers' Compensation",
     short: "Workers' Comp",
     description:
-      "Wage replacement and medical benefits for injured crew members — class codes, experience mods, and what contractors need to know.",
+      "Wage replacement and medical benefits for injured crew members. Learn class codes, experience mods, audit mechanics, and how to control your premium.",
     icon: "HardHat",
     keywords: [
-      "workers comp contractor guide",
-      "construction workers compensation explained",
-      "contractor workers comp class codes",
-      "experience modification factor",
+      "contractor workers compensation guide",
+      "workers comp class codes contractor",
+      "experience modification factor contractor",
+      "workers comp contractor education",
     ],
   },
   {
@@ -98,41 +84,13 @@ export const SERVICES = [
     title: "Commercial Auto",
     short: "Commercial Auto",
     description:
-      "Coverage for contractor vehicles, trucks, trailers, and hired/non-owned auto — when personal auto policies fall short.",
+      "Coverage for contractor vehicles, trucks, trailers, and hired/non-owned auto. When personal auto policies fall short — and how to structure your fleet coverage.",
     icon: "Truck",
     keywords: [
-      "commercial auto insurance contractor guide",
+      "commercial auto insurance contractor",
       "contractor truck insurance explained",
       "hired non-owned auto contractor",
       "fleet insurance contractor",
-    ],
-  },
-  {
-    slug: "commercial-umbrella",
-    title: "Commercial Umbrella",
-    short: "Umbrella",
-    description:
-      "Excess liability limits above GL, auto, and employers liability — how umbrella works and when subcontracts require it.",
-    icon: "Umbrella",
-    keywords: [
-      "commercial umbrella contractor explained",
-      "excess liability contractor guide",
-      "umbrella policy construction",
-      "contractor umbrella insurance",
-    ],
-  },
-  {
-    slug: "surety-bonds",
-    title: "Surety Bonds",
-    short: "Bonds",
-    description:
-      "License bonds, performance bonds, and payment bonds — what they are, when they're required, and how they differ from insurance.",
-    icon: "Award",
-    keywords: [
-      "contractor surety bond explained",
-      "contractor license bond guide",
-      "performance bond information",
-      "payment bond contractor",
     ],
   },
   {
@@ -140,13 +98,55 @@ export const SERVICES = [
     title: "Tools & Equipment",
     short: "Tools & Equipment",
     description:
-      "Inland marine coverage for contractor tools — what commercial property misses and how tools coverage actually works.",
+      "Inland marine coverage for contractor tools. Learn the difference between commercial property (which misses jobsite tools) and a proper tools floater.",
     icon: "Wrench",
     keywords: [
-      "tools and equipment insurance guide",
-      "contractor tools coverage explained",
-      "inland marine contractor information",
+      "tools equipment insurance contractor school",
+      "inland marine contractor guide",
+      "contractor tools floater explained",
       "jobsite tool theft insurance",
+    ],
+  },
+  {
+    slug: "professional-liability",
+    title: "Professional Liability",
+    short: "E&O / Prof. Liability",
+    description:
+      "Errors and omissions for design-build, consulting, and professional services. Learn why GL doesn't cover professional errors — and when you need both policies.",
+    icon: "FileCheck",
+    keywords: [
+      "professional liability contractor school",
+      "contractor E&O insurance explained",
+      "design build liability insurance",
+      "errors omissions contractor guide",
+    ],
+  },
+  {
+    slug: "commercial-umbrella",
+    title: "Commercial Umbrella",
+    short: "Umbrella / Excess",
+    description:
+      "Excess liability above GL, auto, and employers liability. Learn how umbrella stacks, what GC subcontracts require, and when higher limits are worth the cost.",
+    icon: "Umbrella",
+    keywords: [
+      "commercial umbrella contractor school",
+      "excess liability contractor explained",
+      "umbrella policy contractor guide",
+      "follow-form umbrella contractor",
+    ],
+  },
+  {
+    slug: "surety-bonds",
+    title: "Surety Bonds",
+    short: "Bonds",
+    description:
+      "License bonds, performance bonds, and payment bonds — what they are, when they're required, and the critical difference between a bond and insurance.",
+    icon: "Award",
+    keywords: [
+      "contractor surety bond school",
+      "license bond contractor explained",
+      "performance bond information contractor",
+      "surety bond vs insurance contractor",
     ],
   },
 ] as const;
@@ -159,56 +159,56 @@ export const LOCATIONS = [
     name: "Texas",
     region: "South Central",
     blurb:
-      "Texas contractors navigate a massive construction market across Dallas-Fort Worth, Houston, Austin, and San Antonio. We provide contractor insurance information and quotes specific to Texas requirements across every trade.",
+      "Texas contractors operate across DFW, Houston, Austin, and San Antonio in one of the largest construction markets in the US. We teach and place contractor insurance programs specific to Texas requirements.",
   },
   {
     slug: "california",
     name: "California",
     region: "Pacific Coast",
     blurb:
-      "California has strict contractor licensing and insurance requirements. We provide comprehensive contractor insurance information and placement for CA contractors across the Bay Area, Los Angeles, and San Diego.",
+      "California has strict contractor licensing and insurance mandates. We educate CA contractors on GL, workers' comp, and professional liability requirements across the Bay Area, Los Angeles, and San Diego.",
   },
   {
     slug: "florida",
     name: "Florida",
     region: "Southeast",
     blurb:
-      "Florida's active construction and storm-restoration market demands comprehensive contractor insurance programs. We serve Florida contractors statewide with information and coverage across all trades.",
+      "Florida's construction and storm-restoration market requires comprehensive contractor insurance programs. We serve Florida contractors statewide with education and placement across all trades.",
   },
   {
     slug: "southeast",
     name: "Southeast",
     region: "Multi-State",
     blurb:
-      "The Southeast construction boom drives demand for specialty contractor insurance. We provide information and coverage for contractors across GA, NC, SC, TN, AL, and MS.",
+      "The Southeast construction boom drives demand for specialty contractor programs. We educate and insure contractors across GA, NC, SC, TN, AL, and MS.",
   },
   {
     slug: "midwest",
     name: "Midwest",
     region: "Multi-State",
     blurb:
-      "Midwest contractors face diverse project types from commercial to residential. We write contractor insurance programs across OH, IL, MI, IN, WI, MN, MO, and KS.",
+      "Midwest contractors handle diverse project types from commercial to residential. We teach and place contractor insurance across OH, IL, MI, IN, WI, MN, MO, and KS.",
   },
   {
     slug: "northeast",
     name: "Northeast",
     region: "Multi-State",
     blurb:
-      "Northeast contractors work in some of the most demanding regulatory environments in the country. We provide contractor insurance information and placement in NY, NJ, CT, MA, PA, and RI.",
+      "Northeast contractors work in demanding regulatory environments. We educate and insure contractors in NY, NJ, CT, MA, PA, and RI — with programs meeting the highest GC requirements.",
   },
   {
     slug: "mountain-west",
     name: "Mountain West",
     region: "Multi-State",
     blurb:
-      "Mountain West construction markets in CO, AZ, NV, UT, and NM are growing rapidly. We write contractor insurance programs across the entire region.",
+      "Mountain West construction markets in CO, AZ, NV, UT, and NM are among the fastest-growing. We write and teach contractor insurance programs across the entire region.",
   },
   {
     slug: "pacific-west",
     name: "Pacific West",
     region: "Multi-State",
     blurb:
-      "Pacific West contractors in WA and OR work across residential, commercial, and infrastructure sectors. We provide complete contractor insurance information and placement from Seattle to Portland.",
+      "Pacific West contractors in WA and OR work across residential, commercial, and infrastructure. We provide contractor insurance education and placement from Seattle to Portland.",
   },
 ] as const;
 
@@ -225,7 +225,7 @@ export const CREDENTIALS = [
 
 export const STATS = [
   { value: 500, suffix: "+", label: "Contractors insured nationwide", prefix: "" },
-  { value: 20, suffix: "+", label: "Years placing contractor programs", prefix: "" },
+  { value: 20, suffix: "+", label: "Years as contractor specialists", prefix: "" },
   { value: 15, suffix: " min", label: "Average quote turnaround", prefix: "" },
   { value: 50, suffix: "", label: "States licensed & writing", prefix: "" },
 ] as const;
@@ -233,23 +233,23 @@ export const STATS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Finally found an agent who could explain the difference between GL and E&O clearly — and then actually placed both. The resource hub on this site helped me understand what I was buying before I ever called.",
-    name: "Aaron M.",
+      "This site taught me more about GL and completed operations in an hour than I learned in 10 years of running crews. Walked into my next GC negotiation actually understanding what I was signing.",
+    name: "Marcus T.",
     role: "General Contractor",
     location: "Texas",
   },
   {
     quote:
-      "I didn't understand completed-operations coverage until I read the guides here. Now I know exactly what my policy covers and what it doesn't — and I'm not carrying the gaps my last broker left me with.",
-    name: "Patricia S.",
+      "I always thought professional liability was just for architects. The school module on design-build explained exactly why I needed it. Now I carry both GL and E&O and sleep better.",
+    name: "Jennifer K.",
     role: "Design-Build Contractor",
-    location: "California",
+    location: "Colorado",
   },
   {
     quote:
-      "Used the information here to understand umbrella limits before a GC negotiation. Walked into that subcontract knowing exactly what I needed. Saved me from signing a contract I couldn't actually meet.",
-    name: "Derek W.",
-    role: "Electrical Contractor",
+      "The workers' comp class codes module saved me real money — I was misclassified for two years. Fixed it, got a premium credit. These guys actually know contractor insurance.",
+    name: "Roberto V.",
+    role: "HVAC Contractor",
     location: "Florida",
   },
 ] as const;
