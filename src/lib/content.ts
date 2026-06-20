@@ -131,25 +131,25 @@ export const PROCESS = [
   {
     step: "01",
     title: "Choose your course",
-    body: "Select the coverage type you need to understand — GL, workers' comp, professional liability, or any other line.",
+    description: "Select the coverage type you need to understand — GL, workers' comp, professional liability, or any other line.",
     icon: FileSearch,
   },
   {
     step: "02",
     title: "Learn what it covers",
-    body: "Read the in-depth module. Understand inclusions, exclusions, limits, and common traps before you buy.",
+    description: "Read the in-depth module. Understand inclusions, exclusions, limits, and common traps before you buy.",
     icon: ShieldCheck,
   },
   {
     step: "03",
     title: "Get a real quote",
-    body: "Tell us about your business. We shop A-rated specialty contractor markets and return a quote in about 15 minutes.",
+    description: "Tell us about your business. We shop A-rated specialty contractor markets and return a quote in about 15 minutes.",
     icon: PhoneCall,
   },
   {
     step: "04",
     title: "Bind and get your cert",
-    body: "Review the quote, bind coverage, and get your certificate of insurance. Same-day in most cases.",
+    description: "Review the quote, bind coverage, and get your certificate of insurance. Same-day in most cases.",
     icon: FileSignature,
   },
 ];
