@@ -48,11 +48,6 @@ export const COPY = {
     h3: "Get covered.",
     lead: "Education first, then placement. Four steps from zero to covered.",
   },
-  testimonials: {
-    eyebrow: "Student reviews",
-    h2: "What contractors",
-    h2Highlight: "are saying",
-  },
   finalCta: {
     eyebrow: "Ready to get covered?",
     h2: "Stop guessing about your insurance.",

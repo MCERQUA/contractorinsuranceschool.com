@@ -12,7 +12,7 @@ export const SITE = {
   founded: 2005,
   npn: "8608479",
   address: {
-    street: "12220 E Riggs Road Suite #105",
+    street: "12220 E Riggs Road Suite #104",
     city: "Chandler",
     state: "AZ",
     zip: "85249",
@@ -230,26 +230,3 @@ export const STATS = [
   { value: 50, suffix: "", label: "States licensed & writing", prefix: "" },
 ] as const;
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "This site taught me more about GL and completed operations in an hour than I learned in 10 years of running crews. Walked into my next GC negotiation actually understanding what I was signing.",
-    name: "Marcus T.",
-    role: "General Contractor",
-    location: "Texas",
-  },
-  {
-    quote:
-      "I always thought professional liability was just for architects. The school module on design-build explained exactly why I needed it. Now I carry both GL and E&O and sleep better.",
-    name: "Jennifer K.",
-    role: "Design-Build Contractor",
-    location: "Colorado",
-  },
-  {
-    quote:
-      "The workers' comp class codes module saved me real money — I was misclassified for two years. Fixed it, got a premium credit. These guys actually know contractor insurance.",
-    name: "Roberto V.",
-    role: "HVAC Contractor",
-    location: "Florida",
-  },
-] as const;
